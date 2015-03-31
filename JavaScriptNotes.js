@@ -69,5 +69,39 @@ typeof "hello" - the operator is typeof and the string "hello" is the operand
 
 */
 
+/* Strings - A String is a collection of letters or characters.  We can create a string literal by writing a group of characters
+inside quotation marks, either single or double:
+
+"hello"
+'hello'
+
+String Constructor Function
+
+You can create a string object using the following constructor function:
+
+new String("hello")
+
+This will create a new string that is the same as the string literal "hello", although it will be classed as an object rather
+than a primitive value.
+
+For this reason it is preferable to use the string literal notation - requires less typing.
+
+If you want to use quotes inside a string, you can use the opposite of either double or single depending on which you use:
+
+"Darren said 'hello'"
+'Darren said "hello"'
+
+Otherwise you need to escape the character by using a backslash:
+
+\' - escape single
+\" - escape double
+\n - end of line
+\r - carriage return
+\t - tab
+\\ - escaping an actual backslash requires 2x
+
+*/
+
+
 
 
