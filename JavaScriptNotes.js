@@ -102,6 +102,16 @@ Otherwise you need to escape the character by using a backslash:
 
 */
 
+/* Variables - Variables are a way of storing a value in memory for later use.  In JavaScript you declare a variable by using the keyword var
+
+You don't have to declare a variable before you use it but bad things can happen if you don't.  Best practice to always declare a variable.
+
+You can declare multiple variables at once seperating with a comma: 
+
+var a,b,c;
+
+ */
+
 
 
 
