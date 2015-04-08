@@ -110,6 +110,15 @@ You can declare multiple variables at once seperating with a comma:
 
 var a,b,c;
 
+Rules for Naming Variables
+
+When naming a variable you should try and give them suitable names which describe what they represent.
+
+A variable name can start with any upper or lower case letter, an underscore, or dollar symbol.  It can also contain numbers but cannot start with them.
+
+Variable names are case sensitive and you should use Camel case for variables with more than one word names.  Alternately you can use underscores to separate the words.  It is important to be consistent.
+
+
  */
 
 
