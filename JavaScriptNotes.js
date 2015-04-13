@@ -118,6 +118,22 @@ A variable name can start with any upper or lower case letter, an underscore, or
 
 Variable names are case sensitive and you should use Camel case for variables with more than one word names.  Alternately you can use underscores to separate the words.  It is important to be consistent.
 
+Reserved Words
+
+There are several reserved words in JavaScript that can't be used to name variables
+
+The list is: abstract, boolean, break, byte, case, catch, char, class, const,
+continue, debugger, default, delete, do, double, else, enum,
+export, extends, false, final, finally, float, for, function, 
+goto, if, implements, import, in instanceof, int, inteface, 
+long, native, new, null, package, private, protected, public, 
+return, short, static, super, switch, synchronized, this, throw, 
+throws, transient, true, try, typeof, var, volatile, void, while, 
+with
+
+There are also three words that are not in this list that should be:
+
+undefined, NaN (not a number) and Infinity
 
  */
 
