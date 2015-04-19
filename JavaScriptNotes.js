@@ -135,6 +135,30 @@ There are also three words that are not in this list that should be:
 
 undefined, NaN (not a number) and Infinity
 
+Assignment
+
+To assign a value to a variable, we use the = operator.  The example below shows how we set the variable name to point to the string literal "John":
+
+var name // declare the variable first
+
+name = "John"; // assign the variable to a string
+
+To see the value of a variable you can enter it into the console.  The variable name now refers to the string "John" so it will behave exactly the same as that string:
+
+name;
+"John"
+
+typeof name;
+"string"
+
+You can declare and initialize a variable at the same time:
+
+var name = "Snow";
+
+You can also declare and assign values to multiple variables in a single statement:
+
+var x = 2, y, z ="Hi!"; // y has only been declared, it's undefined
+undefined
  */
 
 
