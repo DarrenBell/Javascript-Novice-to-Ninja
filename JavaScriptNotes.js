@@ -159,6 +159,19 @@ You can also declare and assign values to multiple variables in a single stateme
 
 var x = 2, y, z ="Hi!"; // y has only been declared, it's undefined
 undefined
+
+String Properties and Methods
+
+Primitive values and objects have properties and methods.  Properties are information about the object or value, while methods perform an action on the object or value - either to change it or tell us something about it.
+
+We can access the properties of a string using the dot notation.  This involves writing a dot followed by the property we are interested in.  For example every string has a length property that tells us how many characters are in the string:
+
+name = "Snow"; // declare and assign a variable
+Snow
+name.length; // call the length method on name
+4
+
+As you see it shows 4 characters are in the string stored in the name variable.
  */
 
 
