@@ -164,6 +164,8 @@ String Properties and Methods
 
 Primitive values and objects have properties and methods.  Properties are information about the object or value, while methods perform an action on the object or value - either to change it or tell us something about it.
 
+PROPERTIES
+
 We can access the properties of a string using the dot notation.  This involves writing a dot followed by the property we are interested in.  For example every string has a length property that tells us how many characters are in the string:
 
 name = "Snow"; // declare and assign a variable
@@ -172,6 +174,47 @@ name.length; // call the length method on name
 4
 
 As you see it shows 4 characters are in the string stored in the name variable.
+
+Another notation you can use is square brackets to access a primitive value
+
+name['length']; // note the property length is in quote marks
+4
+
+All properties of primitive values are immutable - they are unable to be changed.
+
+So name.length = 7 for example will not work
+
+METHODS
+
+A method is an action that a primitive value or object can perform.  To call a method, we use the dot operator [.] followed by the name of the method, followed by parentheses (this is a useful way to distinguish between a property and a method - methods end with parentheses).  
+
+For example, we can write a string in all capital letters using the toUpperCase() method:
+
+name.toUpperCase();
+SNOW
+
+Or the toLowerCase() method, which will write name in all lower-case letters:
+
+name.toLowerCase();
+snow
+
+If you want to know which character is at a certain position use the chatAt() method:
+
+name.charAt(1);
+n
+
+This tells us that the character 'n' is at position 1.  The first letter is always positioned at 0 because programming counting starts at 0 and not 1.
+
+If you want to find where a certain character or substring appears in a string, we can use the indexOf() method:
+
+name.indexOf("s");
+0
+
+If a character doesn't appear in the string, -1 will be returned.
+
+name.indexOf("z");
+-1
+
  */
 
 
