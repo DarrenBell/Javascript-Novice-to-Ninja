@@ -215,6 +215,30 @@ If a character doesn't appear in the string, -1 will be returned.
 name.indexOf("z");
 -1
 
+If we want the last occurence of a character or substring, we can use the lastIndexOf() method:
+
+name.lastIndexOf("o");
+2
+
+The concat() method can be used to concatenate two or more strings together:
+
+"JavaScript".concat("Ninja");
+"JavaScriptNinja"
+
+"Hello".concat(" ","World","!"); // A blank space between words is represented by quotations around a space.
+"Hello World"
+
+A shortcut for string concatenation is using the + symbol to add the strings together:
+"Java" + "Script" + " " + "Ninja";
+"JavaScript Ninja"
+
+The trim() method will remove any whitespace from the beginning and end of a string:
+
+"    Hello World     ".trim(); // the space in the middle will be preserved
+"Hello World"
+
+"   \t\t  JavaScript Ninja! \r".trim(); // escaped tabs and carriage returns are also removed
+"JavaScript Ninja!"
  */
 
 
