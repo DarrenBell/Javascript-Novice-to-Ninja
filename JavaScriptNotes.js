@@ -241,6 +241,21 @@ The trim() method will remove any whitespace from the beginning and end of a str
 "JavaScript Ninja!"
  */
 
+ /* Numbers
 
+Numbers can be integers (whole numbers - such as 3) or floating point decimals
+(often referred to as just "decimals" or "floats", such as 3.14159).  For example:
+
+typeof 3;
+"number"
+
+typeof 3.14159;
+"number"
+
+As you can see in the examples above, JavaScript doesn't distinguish between integers and floating point decimals -
+they are both given the type of "number", which is a different approach to most other programming languages.
+
+This is set out in the ECMAScript specification, although most JavaScript engines will treat integers and floats
+ differently in the background in order to improve efficiency.
 
 
