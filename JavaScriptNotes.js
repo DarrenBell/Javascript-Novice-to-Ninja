@@ -295,3 +295,46 @@ Fractional values can be created by using a negative index value:
 
 2.5e-3 // means 2.5 multiplied by 10 to the power of -3 (0.001)
 0.0025
+
+Number Methods
+
+Numbers also have some built-in methods, although you need to be careful when using the dot notation with number literals because the dot can be confused as a decimal point. There are a few ways to deal with this, which we'll demonstrate with the toExponential() method; this returns the number as a string in exponential notation.
+
+Use two dots:
+5..toExponential();
+5e+0
+
+Put a space before the dot:
+5 .toExponential();
+5e+0
+
+Always write integers as a decimal:
+5.0.toExponential();
+5e+0
+
+Place the integer in parentheses:
+(5).toExponential();
+5e+0
+
+Assign the number to a variable:
+var number = 5;
+5
+number.toExponential();
+5e+0
+
+The toFixed() method rounds a number to a fixed number of decimal places:
+
+var pi = 3.1415926;
+undefined
+
+pi.toFixed(3); // only one dot needed when using variables
+"3.142"
+
+Note that the value is returned as a string.
+
+The toPrecision() method rounds a number to a fixed number of significant figures that is once again returned as a string (and often using exponential notation):
+325678..toPrecision(2);
+"3.3e+5"
+2.459.toPrecision(2);
+"2.5"
+
