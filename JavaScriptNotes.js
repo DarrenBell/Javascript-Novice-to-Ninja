@@ -258,4 +258,25 @@ they are both given the type of "number", which is a different approach to most 
 This is set out in the ECMAScript specification, although most JavaScript engines will treat integers and floats
  differently in the background in order to improve efficiency.
 
+Number Constructor Function
 
+Just like strings, numbers have a constructor function.
+
+new Number(3)
+
+It take a lot longer to write this so stick with just writing the number, for example 3.  The number literal method.
+
+Octal and Hexadecimal Numbers
+
+If a number starts with a 0x, it is considered to be in hexadecimal (base 16) notation:
+0xAF; // A represents 10, F represents 15
+175
+
+Hexadecimal or "hex" numbers are often used for color codes on the Web.
+
+If a number starts with a zero, it is usually considered to be in octal (base 8) notation:
+
+047; // 4 eights and 7 units
+39
+
+Octal numbers are not actually part of the ECMAScript standard but JavaScript engines implement the convention.
