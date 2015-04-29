@@ -280,3 +280,18 @@ If a number starts with a zero, it is usually considered to be in octal (base 8)
 39
 
 Octal numbers are not actually part of the ECMAScript standard but JavaScript engines implement the convention.
+
+Exponential Notation
+
+Numbers can also be represented in exponential notation, which is shorthand for "multiply by 10 to the power of" (you may have heard this referred to as "scientific notation" or "standard form").  Examples:
+
+1e6; // means 1 multiplied by 10 to the power of 6 (a million)
+1000000
+
+2E3; // can also be written as 2E3, 2E+3 and 2e+3
+2000
+
+Fractional values can be created by using a negative index value:
+
+2.5e-3 // means 2.5 multiplied by 10 to the power of -3 (0.001)
+0.0025
