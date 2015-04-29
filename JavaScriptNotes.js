@@ -338,3 +338,30 @@ The toPrecision() method rounds a number to a fixed number of significant figure
 2.459.toPrecision(2);
 "2.5"
 
+Arithmetic Operations
+
+All the usual arithmetic operations can be carried out in JavaScript
+
+Addition:
+5+4.3;
+9.3
+
+Subtraction:
+6 - 11;
+-5
+
+Multiplication:
+6*7;
+42
+
+Division:
+3/7;
+0.42857142857142855
+
+You can also calculate the remainder of a division using the % operator:
+23%6; // the same as asking 'what is the remainder when 23 is divided by 6'
+5
+
+This is similar to, but not quite the same as modulo arithmetic. That is because the result always has the same sign as the first number:
+-4%3; // -4 modulo 3 would be 2
+-1
