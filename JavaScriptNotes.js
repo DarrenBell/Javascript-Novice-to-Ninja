@@ -365,3 +365,32 @@ You can also calculate the remainder of a division using the % operator:
 This is similar to, but not quite the same as modulo arithmetic. That is because the result always has the same sign as the first number:
 -4%3; // -4 modulo 3 would be 2
 -1
+
+Changing Variables
+
+If a variable has been assigned a numeric value, it can be increased using the following operation:
+
+points = 0; // initialize points score to zero
+0
+
+points = points + 10;
+10
+
+This will increase the value held in the points variable by 10.  You can also use the compound assignment operator, +=, which is a shortcut for performing the same task, but helps you avoid writing the variable name twice:
+
+points += 10;
+20
+
+There are equivalent compound assignment operators for all the operators in the previous section:
+
+points -= 5; // decreases points by 5
+15
+
+points *= 2; // doubles points
+30
+
+points /= 3; // divides the value of points by 3
+10
+
+points %= 7; // changes the value of points to the remainder if its current value is divided by 7
+3
