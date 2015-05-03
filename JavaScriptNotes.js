@@ -414,3 +414,33 @@ points--;  // returns 5 then decreases to 4
 
 --points; // decreases points to 3 then returns
 3
+
+Infinity
+
+Infinity is a special error value in JavaScript that is used to represent any number that is too big for JavaScript to deal with. The biggest number that JavaScript can handle is 1.7976931348623157e+308:
+
+1e308
+
+2e308; // too big
+Infinity
+
+There is also a value -Infinity, which is used for negative numbers that go below -1.7976931348623157e+308:
+
+-1e309;
+-Infinity
+
+The value of Infinity can also be obtained by dividing by zero:
+
+1/0;
+Infinity
+
+The smallest number that JavaScript can deal with is 5e-324.  Anything below this evaluates to either 5e-324 or zero;
+
+5e-324;
+5e-324
+
+3e-325;
+5e-324
+
+2e-325;
+0 
