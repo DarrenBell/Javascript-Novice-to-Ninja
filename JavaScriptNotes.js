@@ -394,3 +394,23 @@ points /= 3; // divides the value of points by 3
 
 points %= 7; // changes the value of points to the remainder if its current value is divided by 7
 3
+
+Incrementing Values
+
+If you only want to increment a value by 1, you can use the ++ operator. This goes directly before or after the variable.
+
+So what's the difference between putting the ++ operator before or after the variable? The main difference is the value that is returned by the operation.  Both operations increase the value of the points variable by 1, but points++ will return the original value then increase it by 1, whereas ++points will increase the value by 1, then return the new value:
+
+points++; // will return 3, then increase points to 4
+3
+
+++points; // will increase points to 5, then return it
+5
+
+There is also a -- operator that works the same way
+
+points--;  // returns 5 then decreases to 4
+5
+
+--points; // decreases points to 3 then returns
+3
