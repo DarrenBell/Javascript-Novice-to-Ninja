@@ -419,6 +419,7 @@ Infinity
 
 Infinity is a special error value in JavaScript that is used to represent any number that is too big for JavaScript to deal with. The biggest number that JavaScript can handle is 1.7976931348623157e+308:
 
+1e308; // 1 with 308 zeroes
 1e308
 
 2e308; // too big
