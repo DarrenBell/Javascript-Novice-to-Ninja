@@ -455,3 +455,42 @@ NaN
 
 The result returned by the typeof operator is rather ironic, however:
 'number'
+
+Type Coercion
+
+Type coercion is the process of converting the type of a value in the background to try and make an operation work. For example, if you try to multiply a string and a number together, JavaScript will attempt to coerce the string into a number:
+
+"2" * 8;
+16
+
+If you try and add a string to a number however, JavaScript converts the number to a string and then concatenate the two strings together:
+
+"2" + 8
+28
+
+Converting Strings to Numbers
+
+We can convert strings to numbers and vice versa using various methods:
+
+To convert a string to a number we can multiply a numerical string by 1, which will convert it to a number because of type coercion:
+
+answer = "5" * 1
+5
+
+typeof answer;
+"number"
+
+Another way to convert a string to number is by placing a + in front of the string:
+
+answer = +"5";
+5
+
+typeof answer;
+"number"
+
+Another way to convert a string to a number is by using the Number function:
+
+Number("23");
+23
+
+This is the preferred way to convert strings to numbers as it avoids type coercion in the background.  The conversion is explicit, making it obvious what is being done.
