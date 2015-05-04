@@ -435,7 +435,7 @@ The value of Infinity can also be obtained by dividing by zero:
 1/0;
 Infinity
 
-The smallest number that JavaScript can deal with is 5e-324.  Anything below this evaluates to either 5e-324 or zero;
+The smallest number that JavaScript can deal with is 5e-324.  Anything below this evaluates to either 5e-324 or zero.
 
 5e-324;
 5e-324
