@@ -444,4 +444,14 @@ The smallest number that JavaScript can deal with is 5e-324.  Anything below thi
 5e-324
 
 2e-325;
-0 
+0
+
+NaN
+
+NaN is an error value that is short for "Not a Number". It is used when an operation is attempted and the result isn't numerical:
+
+"hello" * 5;
+NaN
+
+The result returned by the typeof operator is rather ironic, however:
+'number'
