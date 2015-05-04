@@ -494,3 +494,25 @@ Number("23");
 23
 
 This is the preferred way to convert strings to numbers as it avoids type coercion in the background.  The conversion is explicit, making it obvious what is being done.
+
+Convert Numbers to Strings
+
+To change numbers into strings you can add an empty string, which will use type coercion to silently convert the number into a string in the background:
+
+3+'';
+"3"
+
+The preferred way is to use the String function
+
+String(3);
+"3"
+
+There is also the very similar toString() method, but this may change the base of the number. For example, if you want to write the number 10 in binary (base two), you could write:
+
+10..toString(2);
+"1010"
+
+You can go up to base 36, although after base ten, letters are used to represt the digits:
+
+1000000..toString(36) // a million in base 36
+"lfls"
