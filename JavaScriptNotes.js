@@ -8,9 +8,9 @@ This is another type of comment which goes
 over multiple lines
 
 It is considered good practice to put comments into your code
-*/
 
-/* JavaScript is written in C-Style syntax
+
+JavaScript is written in C-Style syntax
 A JavaScript program is made up of a series of statements and each statement ends with a new line or semicolon (;)
 
 example of two statements (one on each line):
@@ -29,9 +29,7 @@ A block is a series of statements that are collected together inside curly brack
 Blocks do not need to be terminated by a semicolon
 Whitespace can be used as much as you like - indenting code for example and nesting code
 
-*/
-
-/* JavaScript has six different types of values - There are five primitive data types
+JavaScript has six different types of values - There are five primitive data types
 
 1. String
 2. Number
@@ -41,9 +39,8 @@ Whitespace can be used as much as you like - indenting code for example and nest
 
 Any value that isn't one of the primitive data types listed is an object(6.)
 
-*/
 
-/* JavaScript has an Operator called "typeof" which finds out the type of a value - examples:
+JavaScript has an Operator called "typeof" which finds out the type of a value - examples:
 
 typeof "hello"
 "string"
@@ -57,9 +54,8 @@ typeof true
 typeof { ninja: "turtle"}
 "object"
 
-*/
 
-/* Operators - An Operator applies an operation to a value, which is known as the operand.  There are three different operands:
+Operators - An Operator applies an operation to a value, which is known as the operand.  There are three different operands:
 
 1. unary operator - only requires one operand
 typeof "hello" - the operator is typeof and the string "hello" is the operand
@@ -67,9 +63,8 @@ typeof "hello" - the operator is typeof and the string "hello" is the operand
 3 + 5 - the operator is the + sign  The numbers 3 and 5 are the operands
 3. ternary operator - requires three operands
 
-*/
 
-/* Strings - A String is a collection of letters or characters.  We can create a string literal by writing a group of characters
+Strings - A String is a collection of letters or characters.  We can create a string literal by writing a group of characters
 inside quotation marks, either single or double:
 
 "hello"
@@ -100,9 +95,8 @@ Otherwise you need to escape the character by using a backslash:
 \t - tab
 \\ - escaping an actual backslash requires 2x
 
-*/
 
-/* Variables - Variables are a way of storing a value in memory for later use.  In JavaScript you declare a variable by using the keyword var
+Variables - Variables are a way of storing a value in memory for later use.  In JavaScript you declare a variable by using the keyword var
 
 You don't have to declare a variable before you use it but bad things can happen if you don't.  Best practice to always declare a variable.
 
@@ -239,9 +233,9 @@ The trim() method will remove any whitespace from the beginning and end of a str
 
 "   \t\t  JavaScript Ninja! \r".trim(); // escaped tabs and carriage returns are also removed
 "JavaScript Ninja!"
- */
 
- /* Numbers
+
+Numbers
 
 Numbers can be integers (whole numbers - such as 3) or floating point decimals
 (often referred to as just "decimals" or "floats", such as 3.14159).  For example:
@@ -516,3 +510,42 @@ You can go up to base 36, although after base ten, letters are used to represt t
 
 1000000..toString(36) // a million in base 36
 "lfls"
+
+Parsing Numbers
+
+There is another useful function called parseInt() that can be used to convert a string representation of a numerical value back into an integer. You can specify the base of the number you are trying to convert, for example:
+
+parseInt("1010",2); // converts from binary, back to decimal
+10
+
+parseInt("omg",36);
+31912
+
+parseInt("23",10);
+23
+
+If a string starts with a number, the parseInt function will use this number and ignore any letters that come afterwards:
+
+var address = "221B Baker Street"
+undefined
+
+parseInt(address, 10)
+221
+
+If you try to do this with the Number function, it returns NaN:
+
+Number(address)
+NaN
+
+And if you use parseInt with a decimal, it will remove anything after the decimal point:
+
+parseInt("2.4",10)
+2
+
+Be careful not to think that this is rounding the number to the nearest integer; it simply removes the part after the decimal point.
+
+There is also a similar function called parseFloat() that converts strings into floating point decimal numbers:
+
+parseFloat("2.9",10)
+2.9
+
