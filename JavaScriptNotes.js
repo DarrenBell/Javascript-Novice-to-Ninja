@@ -549,3 +549,7 @@ There is also a similar function called parseFloat() that converts strings into 
 parseFloat("2.9",10)
 2.9
 
+Undefined
+
+undefined is the value given to variables that have not been assigned a value. It can also occur if an object's property doesn't exist or a function has a missing parameter. It is basically JavaScript's way of saying "I can't find a value for this." 
+
