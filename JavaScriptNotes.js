@@ -553,3 +553,18 @@ Undefined
 
 undefined is the value given to variables that have not been assigned a value. It can also occur if an object's property doesn't exist or a function has a missing parameter. It is basically JavaScript's way of saying "I can't find a value for this." 
 
+Null
+
+null means "no value". It can be thought of as a placeholder that JavaScript uses to say "there should be a value here, but there isn't at the moment."
+
+undefined and null are both "non-value" values. They are similar, although they behave slightly differently. For example, if you try to do sums with them:
+
+10 + null // null behaves like zero
+0
+
+10 + undefined // undefined is not a number
+NaN
+
+null is coerced to be 0, making the sum possible whereas undefined is coerced to NaN, making the sum impossible to perform.
+
+Values tend to be set to undefined by JavaScript, whereas values are usually set to null manually by the programmer.
