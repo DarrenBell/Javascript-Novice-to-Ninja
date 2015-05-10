@@ -568,3 +568,28 @@ NaN
 null is coerced to be 0, making the sum possible whereas undefined is coerced to NaN, making the sum impossible to perform.
 
 Values tend to be set to undefined by JavaScript, whereas values are usually set to null manually by the programmer.
+
+Booleans (boo-urns)
+
+There are only two Boolean values - true and false. They are named after George Boole, an English mathematician who worked in the field of algebraic logic. Boolean values are fundamental in the logical statements that make up a computer program. Every value in JavaScript has a Boolean value and most of them are true (known as truthy values).
+
+To find the Boolean value of something, you can use the Boolean function:
+
+Boolean("hello");
+true
+
+Boolean(42);
+true
+
+Boolean(0);
+false
+
+Only seven (7) values are always false and these are known as falsy values:
+
+"" // double quoted empty string
+'' // single quoted empty string
+0
+NaN
+false
+null
+undefined
