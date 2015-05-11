@@ -593,3 +593,37 @@ NaN
 false
 null
 undefined
+
+Logical Operators
+
+A logical operator can be used with any primitive value or object. The results are based on whether the values are considered to be truthy or falsy.
+
+!(Logical NOT)
+
+Placing the ! operator in front of a value will convert it to a Boolean and return the opposite value. So truthy values will return false, and falsy values will return true. This is known as negation:
+
+!true;
+false
+
+!0;
+true
+
+You can use double negation (!!) to find out if a value is truthy or falsy (it is a shortcut to using the Boolean function we employed earlier because you are effectively negating the negation):
+
+!!'';
+false
+
+!!"hello";
+true
+
+!!3;
+true
+
+!!NaN;
+false
+
+!!"false";
+true
+
+!!'0';
+true
