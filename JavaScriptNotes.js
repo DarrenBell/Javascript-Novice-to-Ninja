@@ -627,3 +627,15 @@ true
 
 !!'0';
 true
+
+&&(Logical AND)
+
+Imagine that you are having a party and want to have some rules about who is allowed in. You might want to allow only people who are wearing glasses AND who are over 18 to be allowed in. This is an example of a logical AND condition: anybody coming to the party must satisfy both conditions before they are let in.
+
+The logical AND operator works on two or more values (the operands) and only evaluates to true if all the operands are truthy. The value that is returned is the last truthy value if they are all true, or the first falsy value if at least one of them is false:
+
+true && true;
+true
+
+3 && 0; // returns 0 because it is falsy
+0 
