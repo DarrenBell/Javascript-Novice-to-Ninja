@@ -639,3 +639,15 @@ true
 
 3 && 0; // returns 0 because it is falsy
 0 
+
+||(Logical OR)
+
+Now imagine that you relax the rules for your party and allow people in if they wear glasses OR are over 18. This means that they only have to satisfy one of the rules to be allowed in - an example of a logical OR condition.
+
+The logical OR operator also works on two or more operands, but evaluates to true if any of the operands are true, so it only evaluates to false if both operands are falsy. The value that is returned is the first truthy value if any of them are true, or the last falsy value if all of them are false:
+
+true || false;
+true
+
+NaN || undefined; // both NaN and undefined are falsy, so undefined will be returned
+undefined
