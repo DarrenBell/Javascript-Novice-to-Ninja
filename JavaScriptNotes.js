@@ -651,3 +651,27 @@ true
 
 NaN || undefined; // both NaN and undefined are falsy, so undefined will be returned
 undefined
+
+Lazy Evaluation
+
+Remember the party example when the condition for entry was that attendees had to wear glasses and be over 18? If you saw somebody without glasses, would you bother asking them to prove that they were over 18? There'd be no point because by not wearing glases, they wouldn't be allowed in anyway.
+
+When the rules were relaxed, people were allowed in if they were wearing glasses or if over 18. If somebody arrived wearing glasses, there would be no need to check their age.
+
+These are examples of lazy evaluation - you only check as many conditions as you have to for somebody to be allowed in. JavaScript performs a similar task and uses lazy evaluation when processing the logical AND and OR operators. This means that it stops evaluating any futher operands once the result is clear.
+
+For example, for a logical AND expression to be true, all the operands have to be true; if any of them are false, there is no point chekcing any subsequent operands as the result will still be false. Similary, for a logical OR to be true, only one of the operands has to be true; hence, as soon as an operand is evaluated to true, the result is returned as true and any subsequent operands won't be checked as the result is of no consequence.
+
+This is demonstrated below:
+
+a = 0; // declare the variable a and assign the value of 0
+0
+
+false && (a = 1); // (a = 1) is truthy, but it won't be evaluated, since the first operand is false
+false
+
+a; // the value of a is still 0
+0
+
+false || (a = 1); // this will evaluate both operands, so a will be assigned the value of 1, which is returned because false is truthy therefore both are evaluated to true
+1
