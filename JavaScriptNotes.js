@@ -675,3 +675,12 @@ a; // the value of a is still 0
 
 false || (a = 1); // this will evaluate both operands, so a will be assigned the value of 1, which is returned because false is truthy therefore both are evaluated to true
 1
+
+Bitwise Operators
+
+Bitwise operators work with operands that are 32-bit integers. These are numbers written in binary (base two) that have 32 digits made up of 0s and 1s. Here are some examples:
+
+5 is written as 00000000000000000000000000000101
+100 is written as 00000000000000000000000001100100
+
+JavaScript will convert any values used with bitwise operators into a 32-bit integer and then carry out the operation.
