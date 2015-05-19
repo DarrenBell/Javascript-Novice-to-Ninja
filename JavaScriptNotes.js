@@ -689,15 +689,15 @@ Bitwise NOT
 
 The bitwise NOT operator [~] will convert the number to a 32-bit integer, then change all the 1s to 0s and all the 0s to 1s. For example, 2476 can be represented as:
 
- 000000000000000001011010101100
+000000000000000001011010101100
 
- Which will change to:
+Which will change to:
 
- 111111111111111110100101010011
+111111111111111110100101010011
 
- This is 1073736019, but the result actually uses negative values, as you can see in the code:
+This is 1073736019, but the result actually uses negative values, as you can see in the code:
 
- ~44;
- -45
+~44;
+-45
 
- In most cases, this operator will return an integer that adds to the original operand to make -1.
+In most cases, this operator will return an integer that adds to the original operand to make -1.
