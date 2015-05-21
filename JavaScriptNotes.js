@@ -701,3 +701,15 @@ This is 1073736019, but the result actually uses negative values, as you can see
 -45
 
 In most cases, this operator will return an integer that adds to the original operand to make -1.
+
+Bitwise AND
+
+You can also use the bitwise AND operator, [&], which will convert both numbers into binary and returns a number that in binary has a 1 in each position for which the corresponding bits of both operands are 1s.  Here's an example:
+
+12 & 10; // in binary this is 1100 & 1010, so only the first digit is 1 in both cases
+8
+
+It can also be used with non-integers, where it returns 1 for true and 0 for false.
+
+5 & "hello"; // both are true
+1
