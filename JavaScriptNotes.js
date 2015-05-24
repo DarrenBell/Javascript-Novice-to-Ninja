@@ -713,3 +713,15 @@ It can also be used with non-integers, where it returns 1 for true and 0 for fal
 
 5 & "hello"; // both are true
 1
+
+Bitwise OR
+
+There is also the bitwise OR operator, [|], which will convert both numbers into binary and return a number that in binary has a 1 in each position for which the corresponding bits of either operands are 1s. Here's an example:
+
+12|10; // in binary this is 1100 & 1010, so the first 3 digits contain a 1
+14
+
+This can also be used with non-integers, and returns 1 for true and 0 for false.
+
+''|"";
+0 // both are falsy 
