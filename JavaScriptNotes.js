@@ -725,3 +725,18 @@ This can also be used with non-integers, and returns 1 for true and 0 for false.
 
 ''|"";
 0 // both are falsy 
+
+Bitwise XOR
+
+Another operation is the bitwise XOR operator, [^], which stands for "eXclusive OR". This will convert both numbers into binary and return a number that in binary has a 1 in each position for which the corresponding bits of either operands are 1s, but not both 1s. Here's an example:
+
+12^10; // in binary this is 1100 & 1010, so only the second and third digits are exclusively 1s
+6
+
+When using non-integer values, this evaluates to 1 if either operands are truthy and evaluates to 0 if both operands are truthy or both are falsy:
+
+1^0; // the first operand is truthy
+1
+
+true ^ true; // if both operands are true then the result is false
+0
