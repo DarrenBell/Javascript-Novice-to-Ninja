@@ -740,3 +740,16 @@ When using non-integer values, this evaluates to 1 if either operands are truthy
 
 true ^ true; // if both operands are true then the result is false
 0
+
+Bitwise Shift Operators
+
+The bitwise shift operators, << and >> will move the binary representation a given number of places to the right or left, which effectively multiplies or divides the number by the powers of two:
+
+3 << 1; // multiply by 2
+6
+
+16 >> 1; // divide by 2
+8
+
+5 << 3; // multiply by 2 cubed (8)
+40
