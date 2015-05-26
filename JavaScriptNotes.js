@@ -770,3 +770,40 @@ answer = 5;
 What we've actually done is assign the value of 5 to the variable answer, effectively overwriting the previous value!
 
 The correct way to check for equality is to use either a double equals operator, ==, known as "soft equality" or the triple equals operator, ===, known as "hard equality".
+
+Soft Equality
+
+We can check if answer is in fact equal to 5 using soft equality, like so:
+
+answer == 5;
+true
+
+This seems to work fine, but unfortunately there are some slight problems when using soft equality:
+
+answer == "5";
+true
+
+As you can see, JavaScript is returning true when we are checking if the variable answer is equal to the string "5", when in fact answer is equal to the number 5. This is an important difference, but when a soft inequality is used, JavaScript will attempt to coerce the two values to the same type when doing the comparison. This can lead to some very strange results.
+
+" " == 0;
+true
+
+" " == "0";
+false
+
+false == "0";
+true
+
+"1" == true;
+true
+
+"2" == true;
+false
+
+"true" == true;
+false
+
+null == undefined;
+true
+
+As you can see, values that are not actually equal have a tendency to be reported as being equal to each other when using the soft equality operator.
