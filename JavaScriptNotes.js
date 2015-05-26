@@ -753,3 +753,20 @@ The bitwise shift operators, << and >> will move the binary representation a giv
 
 5 << 3; // multiply by 2 cubed (8)
 40
+
+Comparison
+
+We often need to compare values when we are programming. JavaScript has several ways to compare two values.
+
+Equality
+
+Remember earlier, when we assigned a value to a variable? We used the = operator to do this, which would be the logical choice for testing if two values are equal.
+
+Unfortunately, we can't use it because it is used for assigning values to variables. For example, say we had a variable called answer and we wanted to chedck if it was equal to 5, we might try doing this:
+
+answer = 5;
+5
+
+What we've actually done is assign the value of 5 to the variable answer, effectively overwriting the previous value!
+
+The correct way to check for equality is to use either a double equals operator, ==, known as "soft equality" or the triple equals operator, ===, known as "hard equality".
