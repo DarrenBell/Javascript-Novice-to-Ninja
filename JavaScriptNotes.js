@@ -822,3 +822,15 @@ null === undefined;
 false
 
 As you can see hard equality reports that the variable answer is the number 5, but not the string "5". It also correctly reports that null and undefined are two different values.
+
+Inequality
+
+We can check if two values are not equal using the inequality operator. There is a soft inequality operator, != and a hard inequality operator, !== These work in a similar way to the soft and hard equality operators:
+
+16 != "16"; // type coercion makes these equal
+false
+
+16 !== "16";
+true
+
+As with equality, it is much better to use the hard inequality operator as this will give more reliable results unaffected by type coercion.
