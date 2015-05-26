@@ -807,3 +807,18 @@ null == undefined;
 true
 
 As you can see, values that are not actually equal have a tendency to be reported as being equal to each other when using the soft equality operator.
+
+Hard Equality
+
+Hard Equality also tests that the two values are the same type:
+
+answer === 5;
+true
+
+answer === "5";
+false
+
+null === undefined;
+false
+
+As you can see hard equality reports that the variable answer is the number 5, but not the string "5". It also correctly reports that null and undefined are two different values.
