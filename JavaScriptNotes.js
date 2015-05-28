@@ -881,3 +881,22 @@ Be careful, though, as the results are case-sensitive and upper-case letters are
 
 "apples" < "Bananas";
 false
+
+Arrays
+
+An array is an ordered list of values. To create an array literal, simply write a pair of square brackets:
+
+var myArray = [];
+[]
+
+You can also use an array constructor function:
+
+var myArray = new Array();
+[]
+
+Both of these product an empty array object, but it is preferable to stick to using array literals as they take less typing.
+
+Arrays are not primitive values but a special built-in object, as we can see when we use the typeof operator:
+
+typeof []
+object
