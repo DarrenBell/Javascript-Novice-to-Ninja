@@ -834,3 +834,50 @@ false
 true
 
 As with equality, it is much better to use the hard inequality operator as this will give more reliable results unaffected by type coercion.
+
+Greater Than and Less Than
+
+We can check if a value is great than another using the > operator:
+8 > 4; 
+true
+
+You can also use the "less than" < operator in a simialr way:
+8 < 4;
+false
+
+If you want to check if a value is greater than or equal to another value, you can use the >= operator, but be careful, the equality test works in the same way as the soft equality operator:
+
+8 >= 4;
+true
+
+8 >= 8;
+true
+
+8 >= "8";
+true
+
+As you can see, type coercion means that strings can be confused with numbers. Unfortunately, there are no "hard" greater-than or equal-to operators, so an alternative way to avoid type coercion is to use a combination of the greater-than operator, logical OR, and a hard equality:
+
+8 > 8 || 8 === 8;
+true
+
+8 > "8" || 8 === "8";
+false
+
+There is also a similar "less-than or equal-to" operator:
+
+-1 <= 1;
+true
+
+-1 <= -1;
+true
+
+These operators can also be used with strings, which will be alphabetically ordered to check if one string is "less than" the other:
+
+"apples" < "bananas";
+true
+
+Be careful, though, as the results are case-sensitive and upper-case letters are considered to be "less than" lower-case letters:
+
+"apples" < "Bananas";
+false
