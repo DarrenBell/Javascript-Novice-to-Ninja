@@ -900,3 +900,20 @@ Arrays are not primitive values but a special built-in object, as we can see whe
 
 typeof []
 object
+
+Stacks of Pizza (Example)
+
+Always count from 0 with Array items.
+
+We can create an array to represent a pile of pizza boxes in JavaScript by creating an empty array literal called pizzas:
+
+var pizzas = [];
+
+Each empty box can be thought of as representing an empty element in this array.
+
+To find out what is in box 0, we can open it up and peek inside. In JavaScript, we can find out the value of element 0 in the pizzas array by using the following code:
+
+pizzas[0];
+undefined
+
+To access a specific value in an array, we write its position in the array in square brackets (this is known as its index). If an element in an array is empty, undefined is returned.
