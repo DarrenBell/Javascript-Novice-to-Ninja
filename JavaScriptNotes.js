@@ -917,3 +917,29 @@ pizzas[0];
 undefined
 
 To access a specific value in an array, we write its position in the array in square brackets (this is known as its index). If an element in an array is empty, undefined is returned.
+
+Adding Values to Arrays
+
+If you want to put a Margherita pizza in box 0, he just needs to open the box and put it inside. To place the string "Margherita" inside the first element of our pizzas array, we need to assign it to element 0, like so:
+
+pizzas[0] = "Margherita";
+
+Each item in an array can be treated like a variable. You can change the value using the assignment operator =. For example, we can change the value of the first item in the pizzas array to "Ham & Pineapple":
+
+pizzas[0] = "Ham & Pineapple";
+
+If we receive more pizza orders, we can fill up the boxes with pizzas one by one. We can do this to our array by assigning more values:
+
+pizzas[1] = "Mushroom";
+pizzas[2] = "Spinach & Rocket";
+
+Just as we can put a pizza in any of the boxes in the pile, we can also use the index notation to add new items to any element in the pizzas array:
+
+pizzas[5] = "Pineapple & Sweetcorn"
+
+We can look at the pizzas array by simply typing its name into the console:
+
+pizzas;
+["Ham & Pineapple", "Mushroom", "Spinach & Rocket", undefined, undefined, "Pineapple & Sweetcorn"]
+
+Here we can see that the sixth item (with an index of 5) has been filled with using the "Pineapple & Sweetcorn". This has made the array longer than it was before, so all the other unused slots in the array are filled by the value undefined, just as in we had put a pizza in the sixth box and left the other boxes empty.
