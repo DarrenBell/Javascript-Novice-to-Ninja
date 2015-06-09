@@ -955,3 +955,20 @@ You don't even have to use the same types of items inside an array. This array c
 
 mixedArray = [null, 1, "two", true, undefined, {} ];
 [null, 1, "two", true, undefined, {} ]
+
+Removing Values from Arrays
+
+We can remove a pizza from a box, by opening it and taking the pizza out, leaving the box empty. The delete operator does the same task and will remove an item from an array:
+
+delete pizzas[3];
+true
+
+If we look at the pizzas array, we can see that the fourth entry (with an index of 3) has indeed been removed, but it has been replaced with a value of undefined (as if the box was empty):
+
+pizzas;
+["Margherita", "Mushroom", "Spinach & Rocket", undefined]
+
+Watch out for this as it can even trip up experienced programmers. The value that was in position 3 ("Pineapple & Sweetcorn") has been deleted from the array, but the space that it occupied is still thee and contains a value of undefined. Remember that we only removed the pizza from the box and didn't remove the box completely. This means that the array still has the same number of elements and the position can still be referenced as an index, but it will just return undefined.
+
+pizzas[3];
+undefined
