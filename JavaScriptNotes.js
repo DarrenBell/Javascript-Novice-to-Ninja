@@ -972,3 +972,37 @@ Watch out for this as it can even trip up experienced programmers. The value tha
 
 pizzas[3];
 undefined
+
+Array Properties and Methods
+
+Arrays are a powerful weapon in a JavaScript ninja's toolkit and have some useful methods. To demonstrate these, we're going to use the following pizzas array that is similar to the one we produced earlier. You'll need to create a reference to it by entering the following into the console:
+
+pizzas = ["Margherita", "Mushroom", "Spinach & Rocket", "Ham & Pinapple", "Pineapple & Sweetcorn"]
+
+To find the length of an array, we can use the length property. This is the equivalent to us counting how many boxes are in our pile of pizza boxes:
+
+pizza.length;
+5
+
+We can use the length to find the last item in an array:
+
+pizzas[pizzas.length - 1];
+"Pineapple & Sweetcorn"
+
+Notice that we have to subtract 1 from the length value. This is because the index starts at 0, so the last item in the array will have an index of 1 less than the array’s length.
+
+The length property is mutable, meaning you can manually change it:
+
+pizzas.length = 8;
+8
+pizzas;
+["Margherita", "Mushroom", "Spinach & Rocket", "Ham & Pinapple", "Pineapple & Sweetcorn", undefined, undefined, undefined]
+
+As you can see, if you make the array longer, the extra slots will be filled in with undefined:
+
+pizzas.length = 3;
+3
+pizzas;
+["Margherita", "Mushroom", "Spinach & Rocket"]
+
+If you make the array shorter than it already is, all the extra elements will be removed completely.
