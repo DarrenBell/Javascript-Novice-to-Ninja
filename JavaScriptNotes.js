@@ -943,3 +943,15 @@ pizzas;
 ["Ham & Pineapple", "Mushroom", "Spinach & Rocket", undefined, undefined, "Pineapple & Sweetcorn"]
 
 Here we can see that the sixth item (with an index of 5) has been filled with using the "Pineapple & Sweetcorn". This has made the array longer than it was before, so all the other unused slots in the array are filled by the value undefined, just as in we had put a pizza in the sixth box and left the other boxes empty.
+
+Creating Array Literals
+
+We can create an array literal using square brackets that already contain some initial values, so there's no need to add each value one by one. So we could create another pile of pizza boxes as the following array literal:
+
+var pizzas = ["Margherita", "Musroom", "Spinach & Rocket", "Pineapple & Sweetcorn"];
+["Margherita", "Musroom", "Spinach & Rocket", "Pineapple & Sweetcorn"]
+
+You don't even have to use the same types of items inside an array. This array contains each of the five different types of primitive calues, as well as an empty object:
+
+mixedArray = [null, 1, "two", true, undefined, {} ];
+[null, 1, "two", true, undefined, {} ]
