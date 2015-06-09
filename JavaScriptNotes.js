@@ -1025,3 +1025,18 @@ The unshift() method is similar to the push() method, but appends a new item to 
 
 pizzas.unshift("Chicken & Bacon");
 3
+
+Merging Arrays
+
+The concat() method can be used to merge an array with one or more arrays:
+
+pizzas.concat(["Spicy Beef", "Chicken and Mushroom"]);
+ ["Chicken & Bacon", "Mushroom", "Pepperoni","Spicy Beef", "Chicken and Mushroom"]
+
+ Note that this does not change the pizzas array. it simply creates another array combining the two arrays. You can use assignment to change the pizzas array to this new array. This would be like us adding a whole new pile of boxes on top of the pile we already have:
+
+ pizzas = pizzas.concat(["Spicy Beef", "Chicken and Mushroom"]);
+ ["Chicken & Bacon", "Mushroom", "Pepperoni","Spicy Beef", "Chicken and Mushroom"]
+
+ Now the pizzas array contains these two new strings.
+
