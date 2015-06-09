@@ -1031,24 +1031,67 @@ Merging Arrays
 The concat() method can be used to merge an array with one or more arrays:
 
 pizzas.concat(["Spicy Beef", "Chicken and Mushroom"]);
- ["Chicken & Bacon", "Mushroom", "Pepperoni","Spicy Beef", "Chicken and Mushroom"]
+["Chicken & Bacon", "Mushroom", "Pepperoni","Spicy Beef", "Chicken and Mushroom"]
 
- Note that this does not change the pizzas array. it simply creates another array combining the two arrays. You can use assignment to change the pizzas array to this new array. This would be like us adding a whole new pile of boxes on top of the pile we already have:
+Note that this does not change the pizzas array. it simply creates another array combining the two arrays. You can use assignment to change the pizzas array to this new array. This would be like us adding a whole new pile of boxes on top of the pile we already have:
 
- pizzas = pizzas.concat(["Spicy Beef", "Chicken and Mushroom"]);
- ["Chicken & Bacon", "Mushroom", "Pepperoni","Spicy Beef", "Chicken and Mushroom"]
+pizzas = pizzas.concat(["Spicy Beef", "Chicken and Mushroom"]);
+["Chicken & Bacon", "Mushroom", "Pepperoni","Spicy Beef", "Chicken and Mushroom"]
 
- Now the pizzas array contains these two new strings.
+Now the pizzas array contains these two new strings.
 
-  The join() Method
+The join() Method
 
-  The join() method can be used to turn the array into a string that comprises all the items in the array, separated by commas. This is as if we were asked to write down a list of all the pizzas in our pile of boxes:
+The join() method can be used to turn the array into a string that comprises all the items in the array, separated by commas. This is as if we were asked to write down a list of all the pizzas in our pile of boxes:
 
-  pizzas.join();
-  Chicken & Bacon,Mushroom,Pepperoni,Spicy Beef,Chicken and Mushroom"
+pizzas.join();
+Chicken & Bacon,Mushroom,Pepperoni,Spicy Beef,Chicken and Mushroom"
 
-  You can choose a seperator, other than a comma by placing it inside the parentheses. Let's try using an ampersand:
+You can choose a seperator, other than a comma by placing it inside the parentheses. Let's try using an ampersand:
 
-  pizzas.join(" & ");
-  "Chicken & Bacon & Mushroom & Pepperoni & Spicy Beef & Chicken and Mushroom"
+pizzas.join(" & ");
+"Chicken & Bacon & Mushroom & Pepperoni & Spicy Beef & Chicken and Mushroom"
 
+Slicing and Splicing
+
+Be careful not to get confused with the pizza analogy here - we're slicing the array, not the actual pizzas! The slice() method creates a subarray, effectively chopiing out a slice of an original array starting at one index and finishing at the next. This would be the same as us taking a sleect of pizza boxes from the whole pile, from the second pizza up to but not including the fourth:
+
+pizzas.slice(2,4); // starts at the third item (index of 2) and finishes at the fourth (the item with index 4 is not included)
+["Pepperoni", "Spicy Beef"]
+
+Note that this operation is non-destructive - no items are actually removed from the array, as we can see if we look at the pizzas array:
+
+pizzas;
+["Chicken & Bacon", "Mushroom", "Pepperoni", "Spicy Beef", "Chicken and Mushroom"]
+
+The splice() method removes items from an array and then inerts new items in their place. Say we wanted to remove the Pepperoni  pizza from the pile and replace it with some other boxes containing Chicken and Pepper, and Veggie Deluxe.
+
+pizzas.splice(2, 1, "Chicken and Pepper", "Veggie Deluxe");
+["Pepperoni"]
+
+pizzas
+["Chicken & Bacon", "Mushroom", "Chicken and Pepper", "Veggie Deluxe", "Spicy Beef", "Chicken and Mushroom"]
+
+The first number tells us the index at which to start the splice. In the example we started at index 2, which is the third item in the array ("Pepperoni"). The second number tells us how many items to remove from the array. In the exmaple this was just the one item. Every value after this is then inserted into the array at the same place the other items were removed. The string "Chicken and Pepper", "Veggie Deluxe" are inserted in our example, starting at the third item. Notice that the splice() method returns the items removed from the array as a subarray, so in the example, it returned the array ["Pepperoni"].
+
+The splice() method can also be used to insert values into an array at a specific index without removing any items, by indicating that zero items are to be removed:
+
+pizzas.splice(4, 0, "Ham & Mushroom"); // inserts "Ham & Mushroom" as the fifth item in the pizzas array.
+[]
+
+Notice that an empty array is returned, but the new value of "Ham & Mushroom" has been inserted, which we can see if we look at the pizzas array:
+
+pizzas;
+["Chicken & Bacon", "Mushroom", "Chicken and Pepper", "Veggie Deluxe", "Ham & Mushroom", "Spicy Beef", "Chicken and Mushroom"]
+
+We saw earlier that we can use the delete operator to remove an item from an array. Unfortunately, this leaves a value of undefined in its place. If you want to remove a value completely, you can use the splice() method with a length of 1 and without specifying any values to add:
+
+pizzas.splice(2,1); // will remove the item at index 2 (i.e. the third item in the array)
+["Chicken & Pepper"]
+
+The value that has been removed will be returned as an array containing that value.
+
+If we look at the pizzas array, we can see that the "Chicken & Pepper" has been removed completely:
+
+pizzas;
+["Chicken & Bacon", "Mushroom", "Veggie Deluxe", "Ham & Mushroom", "Spicy Beef", "Chicken and Mushroom"]
