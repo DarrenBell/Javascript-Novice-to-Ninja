@@ -1006,3 +1006,22 @@ pizzas;
 ["Margherita", "Mushroom", "Spinach & Rocket"]
 
 If you make the array shorter than it already is, all the extra elements will be removed completely.
+
+Pop, Push, Shift, and Unshift
+
+To remove the last item from an array, we can use the pop() method. This is justa s if we removed a pizza box from the top of the pile:
+
+pizzas.pop();
+"Spinach & Rocket"
+
+The push() method appends a new value to the end of the array. This is like us putting a new pizza box on top of the pile. The method returns the new length of the array:
+
+pizzas.push("Pepperoni");
+3
+
+The shift() method works in a similar way to the pop() method, but this removes the first item in the array. This is like us removing a pizza from the bottom of the stack of boxes.
+
+The unshift() method is similar to the push() method, but appends a new item to the beginning of the array. This is the equivalent of us adding a new pizza box to the bottom of the pile.
+
+pizzas.unshift("Chicken & Bacon");
+3
