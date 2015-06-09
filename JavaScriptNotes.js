@@ -1040,3 +1040,15 @@ pizzas.concat(["Spicy Beef", "Chicken and Mushroom"]);
 
  Now the pizzas array contains these two new strings.
 
+  The join() Method
+
+  The join() method can be used to turn the array into a string that comprises all the items in the array, separated by commas. This is as if we were asked to write down a list of all the pizzas in our pile of boxes:
+
+  pizzas.join();
+  Chicken & Bacon,Mushroom,Pepperoni,Spicy Beef,Chicken and Mushroom"
+
+  You can choose a seperator, other than a comma by placing it inside the parentheses. Let's try using an ampersand:
+
+  pizzas.join(" & ");
+  "Chicken & Bacon & Mushroom & Pepperoni & Spicy Beef & Chicken and Mushroom"
+
