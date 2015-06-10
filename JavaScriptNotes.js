@@ -1115,3 +1115,15 @@ pizzas.sort();
 It is alphabetical order by default for String objects. Note that this also changes the order of the array permanently.
 
 Numbers Are Sorted Alphabetically - this is fixed using a special type function called a callback.
+
+Finding if a Value is in an Array
+
+We can find out if an array contains an object using the indexOf() method to find the first occurence of a value in an array. If the item is in the array, it will return the index of the first occurence of that item:
+
+pizzas.indexOf("Spicy Beef");
+4 // index of 4, 5th value
+
+If the item is not in the array, it will return -1
+
+pizzas.indexOf("Margherita");
+-1 // not in array
