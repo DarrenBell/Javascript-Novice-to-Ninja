@@ -1095,3 +1095,12 @@ If we look at the pizzas array, we can see that the "Chicken & Pepper" has been 
 
 pizzas;
 ["Chicken & Bacon", "Mushroom", "Veggie Deluxe", "Ham & Mushroom", "Spicy Beef", "Chicken and Mushroom"]
+
+Reverse
+
+We can reverse the order of an array using the reverse() method:
+
+pizzas.reverse();
+["Chicken and Mushroom", "Spicy Beef", "Ham & Mushroom", "Veggie Deluxe", "Mushroom", "Chicken & Bacon"]
+
+Note this changes the order of the array permanently.
