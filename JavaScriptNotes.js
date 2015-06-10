@@ -100,7 +100,7 @@ Variables - Variables are a way of storing a value in memory for later use.  In 
 
 You don't have to declare a variable before you use it but bad things can happen if you don't.  Best practice to always declare a variable.
 
-You can declare multiple variables at once seperating with a comma: 
+You can declare multiple variables at once seperating with a comma:
 
 var a,b,c;
 
@@ -118,11 +118,11 @@ There are several reserved words in JavaScript that can't be used to name variab
 
 The list is: abstract, boolean, break, byte, case, catch, char, class, const,
 continue, debugger, default, delete, do, double, else, enum,
-export, extends, false, final, finally, float, for, function, 
-goto, if, implements, import, in instanceof, int, inteface, 
-long, native, new, null, package, private, protected, public, 
-return, short, static, super, switch, synchronized, this, throw, 
-throws, transient, true, try, typeof, var, volatile, void, while, 
+export, extends, false, final, finally, float, for, function,
+goto, if, implements, import, in instanceof, int, inteface,
+long, native, new, null, package, private, protected, public,
+return, short, static, super, switch, synchronized, this, throw,
+throws, transient, true, try, typeof, var, volatile, void, while,
 with
 
 There are also three words that are not in this list that should be:
@@ -180,7 +180,7 @@ So name.length = 7 for example will not work
 
 METHODS
 
-A method is an action that a primitive value or object can perform.  To call a method, we use the dot operator [.] followed by the name of the method, followed by parentheses (this is a useful way to distinguish between a property and a method - methods end with parentheses).  
+A method is an action that a primitive value or object can perform.  To call a method, we use the dot operator [.] followed by the name of the method, followed by parentheses (this is a useful way to distinguish between a property and a method - methods end with parentheses).
 
 For example, we can write a string in all capital letters using the toUpperCase() method:
 
@@ -551,7 +551,7 @@ parseFloat("2.9",10)
 
 Undefined
 
-undefined is the value given to variables that have not been assigned a value. It can also occur if an object's property doesn't exist or a function has a missing parameter. It is basically JavaScript's way of saying "I can't find a value for this." 
+undefined is the value given to variables that have not been assigned a value. It can also occur if an object's property doesn't exist or a function has a missing parameter. It is basically JavaScript's way of saying "I can't find a value for this."
 
 Null
 
@@ -638,7 +638,7 @@ true && true;
 true
 
 3 && 0; // returns 0 because it is falsy
-0 
+0
 
 ||(Logical OR)
 
@@ -724,7 +724,7 @@ There is also the bitwise OR operator, [|], which will convert both numbers into
 This can also be used with non-integers, and returns 1 for true and 0 for false.
 
 ''|"";
-0 // both are falsy 
+0 // both are falsy
 
 Bitwise XOR
 
@@ -838,7 +838,7 @@ As with equality, it is much better to use the hard inequality operator as this 
 Greater Than and Less Than
 
 We can check if a value is great than another using the > operator:
-8 > 4; 
+8 > 4;
 true
 
 You can also use the "less than" < operator in a simialr way:
@@ -1104,3 +1104,14 @@ pizzas.reverse();
 ["Chicken and Mushroom", "Spicy Beef", "Ham & Mushroom", "Veggie Deluxe", "Mushroom", "Chicken & Bacon"]
 
 Note this changes the order of the array permanently.
+
+Sort
+
+We can sort the order of an array using the sort() method:
+
+pizzas.sort();
+["Chicken & Bacon", "Chicken and Mushroom", "Ham & Mushroom", "Mushroom", "Spicy Beef", "Veggie Deluxe"]
+
+It is alphabetical order by default for String objects. Note that this also changes the order of the array permanently.
+
+Numbers Are Sorted Alphabetically - this is fixed using a special type function called a callback.
