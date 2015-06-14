@@ -1127,3 +1127,29 @@ If the item is not in the array, it will return -1
 
 pizzas.indexOf("Margherita");
 -1 // not in array
+
+Multidimensional Arrays
+
+You can even have an array of arrays, known as a multidimensional array, for example:
+
+multiDimensional = [[0,1],["one","two","three"],[],[true,false]];
+[[0,1],["one","two","three"],[],[true,false]]
+
+This could be used to create a coordinate system:
+
+coordinates = [[1,3],[4,2]];
+[[1,3],[4,2]]
+
+To access the values in a multidimensional array, we use two indices: one to refer to the item's place in the outer array, and one to refer to its place in the inner array:
+
+x1 = coordinates[0][0]; // The first value of the first array
+1
+
+x2 = coordinates[1][0]; // The first value of the second array
+4
+
+y1 = coordinates[0][1]; // The second value of the first array
+3
+
+y2 = coordinates[1][1]; // The second value of the second array
+2
