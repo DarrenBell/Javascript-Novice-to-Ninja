@@ -1153,3 +1153,31 @@ y1 = coordinates[0][1]; // The second value of the first array
 
 y2 = coordinates[1][1]; // The second value of the second array
 2
+
+Logic
+
+In this section we will begin to look at logical conditions that allow you to control the flow of a program.
+
+If Statements
+
+An if looks like the following:
+
+if (condition) {
+	code to run if condition is true;
+}
+
+The code inside the block will only run if the condition is true. If the condition is not a Boolean value, it will be converted to a Boolean, depending on whether or not it is truthy or falsy.
+
+Here is an example that will only display the alert message if the value of age variable is less than 18:
+
+var age = 23;
+if (age<18) {
+	alert("Sorry, you are not old enough to play this game");
+}
+
+Try changing the value of the age variable to a value below 18 as it does in this code, and the alert box will show.
+
+var age = 12;
+if (age < 18) {
+  alert("Sorry, you are not old enough to play this game");
+}
