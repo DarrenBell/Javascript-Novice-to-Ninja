@@ -1181,3 +1181,24 @@ var age = 12;
 if (age < 18) {
   alert("Sorry, you are not old enough to play this game");
 }
+
+Else Statements
+
+The else keyword can be used to add an extra block of code to run if the condition is false. An if ... else statement looks like this:
+
+if (condition) {
+	code to run if condition is true;
+} else {
+	code to run if condition isn't true;
+}
+
+As an example, we can test if a number is even or odd using the following code:
+
+n = 12;
+if (n%2 === 0) {
+	console.log("n is an even number");
+} else {
+	console.log("n is an odd number");
+}
+
+This uses the % operator to check the remainder when diving the variable n by 2.  All even numbers leave no remainder when divided by 2, so we can test to see if n%2 is equal to zero; if it is, n must be even. If n is not even, then it must be odd.
