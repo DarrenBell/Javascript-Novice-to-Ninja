@@ -1216,3 +1216,40 @@ n%2 === 0 ? console.log("n is an even number") : console.log("n is an odd number
 n is an odd number
 
 The ternary operator can make your code more succinct, but can also make it difficult to read, so be careful when you use it.
+
+switch Statements
+
+You can actually string lots of if and else statements together to make a logical decision tree:
+
+if (number === 4) {
+  alert("You rolled a four");
+} else if (number === 5) {
+  alert("You rolled a five");
+} else if(number === 6){
+  alert("You rolled a six");
+} else {
+  alert("You rolled a number less than four");
+}
+
+The switch operator can be used instead, like so:
+
+switch(number) {
+case 4:
+	alert("You rolled a four");
+	break;
+case 5:
+	alert("You rolled a five");
+	break;
+case 6:
+	alert("You rolled a six");
+	break;
+default:
+	alert("You rolled a number less than four");
+	break;
+}
+
+The value that you are comparing goes in parentheses after the switch operator. A case keyword is then used for each possible value that can occur (4, 5, and 6 in the example above). After each case statement is the code that needs to be run if that case occurs.
+
+It is important to finish each case block with the break keyword, as this stops any more of the case blocks being executed. Without a break statement, the program will "fall through" and continue to evaluate subsequent case blocks. This is sometimes implemented on purpose, but it is confusing and should be avoided - a ninja always finishes a case block with a break!
+
+The default keyword is used at the end for any code that needs to be run if none of the cases are true.
