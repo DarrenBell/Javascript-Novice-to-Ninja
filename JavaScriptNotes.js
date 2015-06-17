@@ -1202,3 +1202,17 @@ if (n%2 === 0) {
 }
 
 This uses the % operator to check the remainder when diving the variable n by 2.  All even numbers leave no remainder when divided by 2, so we can test to see if n%2 is equal to zero; if it is, n must be even. If n is not even, then it must be odd.
+
+Ternary Operator
+
+A shorthand way of writing an if ... else statement is to use the ternary operator, ?, which takes three operands in the following format:
+
+condition ? (code to run if condition is true) : (code to run if condition isn't true);
+
+Here's the example for testing if the variable n is odd or even, rewritten using a ternary operator:
+
+n = 5;
+n%2 === 0 ? console.log("n is an even number") : console.log("n is an odd number");
+n is an odd number
+
+The ternary operator can make your code more succinct, but can also make it difficult to read, so be careful when you use it.
