@@ -1253,3 +1253,38 @@ The value that you are comparing goes in parentheses after the switch operator. 
 It is important to finish each case block with the break keyword, as this stops any more of the case blocks being executed. Without a break statement, the program will "fall through" and continue to evaluate subsequent case blocks. This is sometimes implemented on purpose, but it is confusing and should be avoided - a ninja always finishes a case block with a break!
 
 The default keyword is used at the end for any code that needs to be run if none of the cases are true.
+
+Loops
+
+Loops will repeat a piece of code over and over again according to certain conditions.
+
+while Loops
+
+We'll start by looking at a while loop. This will repeatedly run a block of code while a certain condition is true and takes the following structure:
+
+while (condition) {
+	do something
+};
+
+Here's an example that will count down from ten, alerting us with a line from the famous song:
+
+var bottles = 10;
+while (bottles > 0){
+	alert("There were " + bottles + " green bottles, hanging on the wall. And if one green bottle should accidently fall, there'd be " + (bottles-1) + " green bottles hanging on the wall");
+	bottles--;
+};
+
+We start by declaring a variable called bottles. Any variables that are used in the loop must be initialized before the loop is run, otherwise there wil be an error when they are mentioned.
+
+The loop starts here with the while keyword and is followed by a condition and a block of code. The condition in the example is that the number of bottles has to be greater than zero. This basically means "keep repeating the block of code, as long as the number of bottles is greater than zero".
+
+The block of code uses the alert function to display a message about the number of bottles, and then uses the decrement operator to decrease the bottles variable by one.
+
+Here's a more concise way of writing the same loop that moves the increment into the condition:
+
+var bottles = 11;
+while (--bottles){
+	alert("There were " + bottles + " green bottles, hanging on the wall. And if one green bottle should accidently fall, there'd be " + (bottles-1) + " green bottles hanging on the wall");
+};
+
+The reason that this code works is because the loop will continue while the bottles variable is true, and after each loop, the value of the bottles variable decreases by 1. When the bottles variable reaches 0, it is not true anymore (remember that 0 is a falsy value) so the loop will stop. Notice that you have to start with one more bottle (11) as it will be decreased by one even before the first block is run.
