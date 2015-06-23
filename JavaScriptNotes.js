@@ -1344,3 +1344,27 @@ for ( ; bottles > 0; ) { // empty initialization and increment
 }
 
 As you can see, it's possible to use a while loop, a do ... while loop, or a for loop to achieve the same results. A for loop is the most common as it keeps all the details of the loop (the initialization, condition, and increment) in one place and separate from the code block.
+
+Nested for Loops
+
+You can place a loop inside another loop to create a nested loop. It will have an inner loop that will run all the way through before the next step of the outer loop occurs.
+
+Here's an example that produces a multiplication table up to 12 x 12:
+
+for(var n=1 ; n<13 ; n++){
+	for(var m=1; m<13 ; m++){
+	console.log(m + " multiplied by " + n + " is " + n*m);
+	}
+}
+
+The outer loop counts up from n=1 to n=12. For every iteration of the outer loop, the inner loop counts up from m=1 to m=12. This means that it starts in the first iteration with n=1 and m=1, producing the following output that is logged to the console:
+
+1 multiplied by 1 is 1
+
+In the next iteration, we are still inside the inner loop, so n remains at 1, but m is incremented to 2, giving:
+
+1 multiplied by 2 is 2
+
+m continues to increase until it reaches 12. After this, we leave the inner loop and return too the outer loop, when n increases to 2. We then re-enter the inner loop and m is reset back to 1 and begins counting up to 12 again. This continues until the last iteration produces the line:
+
+12 multiplies by 12 is 144
