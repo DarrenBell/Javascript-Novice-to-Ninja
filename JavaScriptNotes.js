@@ -1288,3 +1288,17 @@ while (--bottles){
 };
 
 The reason that this code works is because the loop will continue while the bottles variable is true, and after each loop, the value of the bottles variable decreases by 1. When the bottles variable reaches 0, it is not true anymore (remember that 0 is a falsy value) so the loop will stop. Notice that you have to start with one more bottle (11) as it will be decreased by one even before the first block is run.
+
+Infinite Loops
+
+It is important that the condition in a while loop will be met at some point, otherwise you'll be stuck in an infinite loop that can crash your program.
+
+Consider the following loop:
+
+var n = 1;
+while(n>0){
+	alert("Hello");
+	n++;
+}
+
+This loop will keep running, as the variable n will always be above zero. Most browsers will warn you that there is a slow running script when this happens and give you the option to stop it. If not, you can usually kill the process by closing the tab or restarting the browser.
