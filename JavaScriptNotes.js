@@ -1302,3 +1302,21 @@ while(n>0){
 }
 
 This loop will keep running, as the variable n will always be above zero. Most browsers will warn you that there is a slow running script when this happens and give you the option to stop it. If not, you can usually kill the process by closing the tab or restarting the browser.
+
+do ... while Loops
+
+A do ... while loop is similar to a while loop. The only difference is that the condition comes after the block of code:
+
+do {
+	do something
+} while(condition)
+
+This means that the block of code will always be run at least once, regardless of the condition being true or not.
+
+Here's the example we saw before, rewritten as a do ... while loop:
+
+var bottles = 10;
+do {
+	alert("There were " + bottles + " green bottles, hanging on the wall. And if one green bottle should accidently fall, there'd be" + (bottles-1) + " green bottles hanging on the wall");
+	bottles--;
+} while (bottles > 0)
