@@ -1368,3 +1368,19 @@ In the next iteration, we are still inside the inner loop, so n remains at 1, bu
 m continues to increase until it reaches 12. After this, we leave the inner loop and return too the outer loop, when n increases to 2. We then re-enter the inner loop and m is reset back to 1 and begins counting up to 12 again. This continues until the last iteration produces the line:
 
 12 multiplied by 12 is 144
+
+Looping over Arrays
+
+A for loop can be used to iterate over each value in an array. If we take our pizzas array example from earlier, we can create a for loop that outputs each item in the array to the console using the following loop:
+
+for(var i=0, max=pizzas.length; i < max; i++) {
+	console.log(pizzas[i]);
+}
+"Chicken & Bacon"
+"Chicken and Mushroom"
+"Ham & Mushroom"
+"Mushroom"
+"Spicy Beef"
+"Veggie Deluxe"
+
+There are a few points to note in this example. Array indices start their numbering at zero, so make sure that the value in the for loop also starts at zero. We want the loop to continue until it reaches the length of the array; this can be set as the variable max in the initialization part of the for loop, then the condition becomes i < max. This is preferable to using i < pizzas.length because then the length of the pizzas array would have to be calculated after every pass through the loop. THis might not sound all that important, but it can make a big difference to the speed of the program when using large arrays.
