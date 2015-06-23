@@ -1320,3 +1320,27 @@ do {
 	alert("There were " + bottles + " green bottles, hanging on the wall. And if one green bottle should accidently fall, there'd be" + (bottles-1) + " green bottles hanging on the wall");
 	bottles--;
 } while (bottles > 0)
+
+for Loops
+
+for loops are by far the most common in JavaScript and take the following form:
+
+for (initialization ; condition ; after) { do something }
+
+The initilization code is run before the loop starts and is usually employed to initialize any variables used in the loop. The condition has to be satisfied for the loop to continue. The after code is what to do after each iteration of the loop, and it is typically used to increment a counter of some sort.
+
+Here's the green bottles example written as a for loop:
+
+for (var bottles = 10 ; bottles > 0; bottles--) {
+	alert("There were " + bottles + " green bottles, hanging on the wall. And if one green bottle should accidently fall, there'd be " + (bottles-1) + " green bottles hanging on the wall");
+}
+
+Each of the three parts are optional, and the code could be written as:
+
+var bottles = 10; // bottles is initialized here instead
+for ( ; bottles > 0; ) { // empty initialization and increment
+	alert("There were " + bottles + " green bottles, hanging on the wall. And if one green bottle should accidently fall, there'd be " + (bottles-1) + " green bottles hanging on the wall");
+	bottles--; // increment moved into code block
+}
+
+As you can see, it's possible to use a while loop, a do ... while loop, or a for loop to achieve the same results. A for loop is the most common as it keeps all the details of the loop (the initialization, condition, and increment) in one place and separate from the code block.
