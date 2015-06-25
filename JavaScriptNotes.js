@@ -1384,3 +1384,9 @@ for(var i=0, max=pizzas.length; i < max; i++) {
 "Veggie Deluxe"
 
 There are a few points to note in this example. Array indices start their numbering at zero, so make sure that the value in the for loop also starts at zero. We want the loop to continue until it reaches the length of the array; this can be set as the variable max in the initialization part of the for loop, then the condition becomes i < max. This is preferable to using i < pizzas.length because then the length of the pizzas array would have to be calculated after every pass through the loop. THis might not sound all that important, but it can make a big difference to the speed of the program when using large arrays.
+
+Functions
+
+In JavaScript, functions are considered to be just another value. This means that they do all the same tasks that other values and objects can do, such as be assigned to variables, changed and stored in arrays. You can even define a function inside another function. In technical terms, this means that functions are considered to be first-class objects in JavaScript.
+
+This makes functions a very important and powerful part of the JavaScript language with many of its features relying on them. Hence, fully understanding functions is an essential skill of the JavaScript ninja. 
