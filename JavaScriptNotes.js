@@ -1389,4 +1389,16 @@ Functions
 
 In JavaScript, functions are considered to be just another value. This means that they do all the same tasks that other values and objects can do, such as be assigned to variables, changed and stored in arrays. You can even define a function inside another function. In technical terms, this means that functions are considered to be first-class objects in JavaScript.
 
-This makes functions a very important and powerful part of the JavaScript language with many of its features relying on them. Hence, fully understanding functions is an essential skill of the JavaScript ninja. 
+This makes functions a very important and powerful part of the JavaScript language with many of its features relying on them. Hence, fully understanding functions is an essential skill of the JavaScript ninja.
+
+Defining a Function
+
+To define a function literal we can use a function declaration:
+
+function hello(){
+	alert("Hello World!");
+}
+
+This starts with the function keyword and is followed by the name of the function, which in this case is called 'hello', followed by parentheses. After this is a block that contains the code for the function.
+
+This is known as a named function as the function has a name: 'hello'.
