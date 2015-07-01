@@ -1402,3 +1402,21 @@ function hello(){
 This starts with the function keyword and is followed by the name of the function, which in this case is called 'hello', followed by parentheses. After this is a block that contains the code for the function.
 
 This is known as a named function as the function has a name: 'hello'.
+
+Function Expressions
+
+Another way of defining a function literal is to create a function expression. This assigns an anonymous function to a variable:
+
+var goodbye = function() {
+	alert("Goodbye World!");
+};
+
+The function in this example is known as an anonymous function because it does not have a name; it is simply created, then assigned to the variable goodbye. Alternatively we can create a named function expression instead:
+
+var goodbye = function bye(){
+	alert("Goodbye World!");
+};
+
+The name of this function is bye, and it has been assigned the variable goodbye.
+
+Notice also that the example ends with a semicolon. This finishes the assign statement, whereas a normal function declaration ends in a block (no need for semicolons at the end of blocks).
