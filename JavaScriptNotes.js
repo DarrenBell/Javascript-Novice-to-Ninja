@@ -1420,3 +1420,16 @@ var goodbye = function bye(){
 The name of this function is bye, and it has been assigned the variable goodbye.
 
 Notice also that the example ends with a semicolon. This finishes the assign statement, whereas a normal function declaration ends in a block (no need for semicolons at the end of blocks).
+
+A function's name property
+
+Functions are just objects, and objects have two properties. All functions have a read-only property called name, which can be accessed like so:
+
+hello.name
+"hello"
+
+The name property is not actually part of the ECMAScript standard, although most JavaScript engines support it and use it internally.
+
+Anonymous functions have an empty string as their name property in most browsers, although some versions of IE use undefined.
+
+The name property can be useful whe debugging code, as the name of a function will be used to indicate which functions are causing a problem.
