@@ -1433,3 +1433,13 @@ The name property is not actually part of the ECMAScript standard, although most
 Anonymous functions have an empty string as their name property in most browsers, although some versions of IE use undefined.
 
 The name property can be useful whe debugging code, as the name of a function will be used to indicate which functions are causing a problem.
+
+Function() Constructors
+
+A function can also be declared using the function constructor Function(). The body of the function is entered as a string, as shown in this example:
+
+hi = new Function('alert("Hi World!");');
+
+We'd avoid recommending this way of declaring functions as it is slower and there are problems with placing the function's code inside a string. Even in this simple example, we had to use different quotation marks for the alert function as those used for defining the function body itself.
+
+A ninja should always declare functions using function literals - function declarations or function expressions. These two ways of creating functions are similar, although there are some subtle differences that will be covered later in the chapter. Some people prefer function declarations as they are akin to how functions are declared in other languages. Others prefer function expressions because it is clear that functions are just another value assigned to a variable, rather than a special feature of the language. Whether you use function declarations or function expressions is often a matter of personal taste, but whatever you choose to do - be consistent!
