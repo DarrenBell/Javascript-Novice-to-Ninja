@@ -1443,3 +1443,36 @@ hi = new Function('alert("Hi World!");');
 We'd avoid recommending this way of declaring functions as it is slower and there are problems with placing the function's code inside a string. Even in this simple example, we had to use different quotation marks for the alert function as those used for defining the function body itself.
 
 A ninja should always declare functions using function literals - function declarations or function expressions. These two ways of creating functions are similar, although there are some subtle differences that will be covered later in the chapter. Some people prefer function declarations as they are akin to how functions are declared in other languages. Others prefer function expressions because it is clear that functions are just another value assigned to a variable, rather than a special feature of the language. Whether you use function declarations or function expressions is often a matter of personal taste, but whatever you choose to do - be consistent!
+
+Invoking a Function
+
+Invoking a function is to run the code inside the function's body. To invoke a function, simply enter its name, followed by parentheses. This is how we'd invoke the hello function, for example:
+
+hello();
+"Hello World!"
+
+The function can be invoked over and over again just by typing its name followed by parentheses. This is one of the advantages of using functions - there's no need to write repetitive blocks of code. Another advantage is that all the functionality is kept in one place. So if you want to change part of it, you only need to update the code in one place. This is known as the DRY principle, which stands for Don't Repeat Yourself, and it's important to keep in mind when programming.
+
+If you have assigned a function to a variable, you need to place parentheses after the variable to invoke it as a function:
+
+goodbye();
+"Goodbye World!"
+
+Remember: you need parentheses to invoke a function - either by name or by reference to the variable it is assigned to. If you skip the parentheses, you are simply referencing the function itself rather than invoking it, as you can see here:
+
+goodbye;
+function bye();
+alert("Goodbye World!");
+}
+
+All that has returned is the function definition that the variable goodbye is pointing to, rather than running the code. This can be useful if you want to assign the function to another variable, like so:
+
+seeya = goodbye;
+function bye();
+alert("Goodbye World!");
+}
+
+Now the variable seeya also points to the function called bye and can be used to invoke it:
+
+seeya();
+"Goodbye World!"
