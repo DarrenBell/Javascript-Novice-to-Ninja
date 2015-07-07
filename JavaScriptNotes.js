@@ -1476,3 +1476,20 @@ Now the variable seeya also points to the function called bye and can be used to
 
 seeya();
 "Goodbye World!"
+
+Return Values
+
+All functions return a value, which can be specified using the return operator. A function that doesn't explicitly return anything (such as all the examples we have seen so far) will return undefined by default.
+
+The function in this example will return the string "Yo World!":
+
+function yo(){
+return "Yo World!";
+}
+
+This means that we can assign a variable to a function invocation and the value of that variable will be set to the return value of that function:
+
+message = hi();
+"Yo World!"
+
+The variable message now points to the string "Yo World!". This may seem trivial in this instance (that is, why not just assign the variable to the string directly?), but we can create a more complex function that has different return values depending on certain conditions. This will assign different values to the message variable depending on those conditions. 
