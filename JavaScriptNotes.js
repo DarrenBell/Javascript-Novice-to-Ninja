@@ -1492,4 +1492,38 @@ This means that we can assign a variable to a function invocation and the value 
 message = hi();
 "Yo World!"
 
-The variable message now points to the string "Yo World!". This may seem trivial in this instance (that is, why not just assign the variable to the string directly?), but we can create a more complex function that has different return values depending on certain conditions. This will assign different values to the message variable depending on those conditions. 
+The variable message now points to the string "Yo World!". This may seem trivial in this instance (that is, why not just assign the variable to the string directly?), but we can create a more complex function that has different return values depending on certain conditions. This will assign different values to the message variable depending on those conditions.
+
+Parameters and Arguments
+
+Parameters and arguments are often used interchangeably to represent values that are provided for the function to use. There is a subtle difference though: any parameters a function needs are set when the function is defined. When a function is invoked, it is provided with arguments.
+
+JavaScript does not have a built-in function to square numbers, so we can create one to demonstrate using parameters. In the example that follows, the square function takes one parameter, x, which is the number to be squared. In the body of the function, the name of the parameter acts like a variable equal to the value that is entered when the function is invoked. As you can see, it is mulitplied by itself and the result is returned by the function:
+
+function square(x) {
+return x*x;
+}
+
+When we invoke this function, we need to provide and argument, which is the number to be squared:
+
+square(4.5);
+20.25
+
+You can use as many parameters as you like when defining functions. For example, the following function finds the mean of any three numbers:
+
+function mean(a,b,c){
+return (a+b+c)/3;
+}
+
+mean(2, 6, 19);
+9
+
+If a parameter is not provided as an argument when the function is invoked, the function will still be invoked, but the parameter will be given a value of undefined. If we try to invoke the mean function with only two arguments, we can see that it returns NaN because the function cannot do the required operation with undefined:
+
+mean(1,2)
+NaN
+
+If too many arguments are provided when a function is invoked, the function will work as normal and the extra arguments will be ignored (although they can be accessed using the arguments object that is discussed in the next section):
+
+mean(1,2,3,4,5); // will only find the mean of 1, 2 and 3
+2
