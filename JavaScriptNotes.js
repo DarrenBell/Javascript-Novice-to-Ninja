@@ -1527,3 +1527,11 @@ If too many arguments are provided when a function is invoked, the function will
 
 mean(1,2,3,4,5); // will only find the mean of 1, 2 and 3
 2
+
+The arguments Variable
+
+Evvery function has a special variable called arguments. This is an array-like object that contains every argument of the function when it is invoked:
+
+function arguments(){
+	return arguments;
+}
