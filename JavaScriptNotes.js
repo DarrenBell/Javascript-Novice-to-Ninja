@@ -1535,3 +1535,76 @@ Evvery function has a special variable called arguments. This is an array-like o
 function arguments(){
 	return arguments;
 }
+
+Default Arguments
+
+We can use the fact that undefined is used when arguments are not supplied to provide default values for a function. For example, we can improve the hello function that we created earlier by adding a name parameter so that it says "hello" to the value provided as an argument:
+
+function hello(name){
+	console.log("Hello " + name + "!");
+}
+
+This works as expected, but says "hello" to undefined if no argument is provided:
+
+hello("DAZ");
+"Hello DAZ!"
+
+hello();
+"Hello undefined!"
+
+We can improve the function by checking if the name parameter has a value of undefined and providing a default value of "World" if so:
+
+function hello(name){
+	if (name === undefined) name = "World!";
+	console.log("Hello " + name + "!");
+}
+Now we can invoke the hello function with or without arguments:
+
+hello();
+"Hello World!"
+
+hello("DAZ");
+"Hello DAZ!"
+
+Another way of assigning default values is to use the following line:
+
+name = name || "World";
+
+This is using the logical OR operator to check if the name parameter has a truthy value. If it does, then name will stay the same. If name is falsy (such as undefined), it will take the value of "World". Be careful using this method, however; if the name argument is a falsy value it will be set to the default value of "World", and in some cases you might want it to be the falsy value instead (0, for example).
+
+Default parameters should always come after non-default parameters, otherwise default values will always have to be entered anyway. Consider the following function for calculating a discounted price in a store:
+
+function discount(price, amount) {
+	if(amount === undefined) amount = 10;
+	return price*(100-amount)/100;
+}
+
+It takes two arguments, the price of an item and the percentage discount. The store's most common discount is 10%, so this is provided as a default value. This means that the amount argument can be omitted in most cases and a 10% discount will still be applied:
+
+discount(20) // standard discount of 10%
+18
+
+If a different discount is applied, the amount argument can be provided:
+
+discount(15, 20) // discount of 20%
+12
+
+This will fail to work, however, if the parameters are reversed:
+
+function discount(amount, price) {
+	if (amount === undefined) amount = 10;
+	return price*(100-amount)/100;
+}
+
+Now if we try to use the function with just one argument, the function won't work, because price has not been set:
+
+discount(20);
+NaN
+
+It will work, though, if both values are entered:
+
+discount(10,20);
+18
+
+This somewhat defeats the purpose of the object having default parameters! The golden rule to remember here is that a ninja always puts default parameters after all the other parameters.
+
