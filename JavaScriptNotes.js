@@ -1608,3 +1608,12 @@ discount(10,20);
 
 This somewhat defeats the purpose of the object having default parameters! The golden rule to remember here is that a ninja always puts default parameters after all the other parameters.
 
+Scope
+
+Scope is an important concept in programming, It refers to where a variable is visible and accessible.
+
+In JavaScript, a function creates its own local scope. This means that any local variables defined inside a function using the var keyword are not accessible outside the function.
+
+Global Scope
+
+Any variable declared outside of any function is said to have global scope. This means that is it accessible everywhere in the program. When this may seem to be a good idea at first, it is not considered good practice. A ninja will try to limit the number of global variables to a minimum, because any variable that shares the same name will clash and potentially overwrite each other's value. It might seem unlikely that this would happen, but it is all too common in large programs when you forget which variables you have used - think how often we use the variable i in for loops already! It can also be a problem when you are writing code in teams or if you're using code libraries that may use the same variable names as some of your code.
