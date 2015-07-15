@@ -1617,3 +1617,80 @@ In JavaScript, a function creates its own local scope. This means that any local
 Global Scope
 
 Any variable declared outside of any function is said to have global scope. This means that is it accessible everywhere in the program. When this may seem to be a good idea at first, it is not considered good practice. A ninja will try to limit the number of global variables to a minimum, because any variable that shares the same name will clash and potentially overwrite each other's value. It might seem unlikely that this would happen, but it is all too common in large programs when you forget which variables you have used - think how often we use the variable i in for loops already! It can also be a problem when you are writing code in teams or if you're using code libraries that may use the same variable names as some of your code.
+
+Local Scope
+
+Any variable that is declared inside a function using the var statement will only be available inside that function. This is known as having local scope, as the variable is only visible in the locality of the function (in other words, inside the function block).
+
+If the var statement is not used, the variable will have global scope and be available outside the function. This can be demonstrated in the following example, where the variable a can have two different values depending on whether it is defined inside or outside a function:
+
+var a = 1;
+
+function locala() {
+	var a = 3; // local variable
+	console.log("a inside function: " + a);
+}
+
+locala(); // invoke the locala function
+console.log("a outside function " + a);
+
+The results in the subsequent console log:
+
+"a inside function: 3"
+"a outside function: 1"
+
+In the example, a is defined globally outside the function and is given the value of 1. This means it has global scope and is available inside and outside the function. But then a is defined inside the local function using var. This gives it local scope inside the function where it has a value of 3, but it retains the value of 1 outside the function. For all intents and purposes, the two a variables are different variables.
+
+Here's another example where we define a global variable and then overwrite it from within the function:
+
+b = 2;
+
+function localb() {
+	b = 4; // overwrites the global variable
+	console.log ("b inside function: " + b);
+}
+
+localb(); // invoke the localb function
+console.log("b outside function: " + b);
+
+Here's the resultant console log:
+
+
+"b inside function: 4"
+"b outside function: 4"
+
+In this example, b is defined globally outside the function and given the value of 2. Yet b is not declared using var inside the function, so it still refers to the global variable outside the function. This means that b is the same variable both inside and outside the function and the value of b is overwritten globally to be 4.
+
+Here's another example that creates a global variable from within a function that is then still accessible from outside of the function:
+
+function localc() {
+	c = 5; // creates a new global variable
+	console.log("c inside function: " + c);
+}
+
+localc(); // invoke the localc function
+console.log("c outside function: " + c);
+
+The results in the following console log:
+
+"c inside function: 5"
+"c outside function: 5"
+
+In the example, c is only defined inside the function, but because this is done without using var, it has global scope and is also available outside the function.
+
+Here's another function that creates a local variable inside the function that is not accessible outside the function:
+
+function locald() {
+	var d = 6; // creates a new local variable
+	console.log("d inside function: " + d);
+}
+
+locald(); // invoke the locald function
+console.log("d outisde function " + d);
+
+Here's the console log result:
+
+"d inside function: 6"
+"d is not defined"
+
+In this example, d is also only defined inside the function, but by using var it has local scope and is only accessible inside the function. When we try to log the value of d outside the function, it causes an error because d is not defined outside its scope.
