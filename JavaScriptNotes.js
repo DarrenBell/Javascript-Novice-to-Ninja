@@ -1739,3 +1739,50 @@ subtract = function(x,y){
 }
 
 This is the major difference between the two ways of defining function literals and it may influence your decision regarding which one to use. Some people like that using function expressions means you're required to define all functions and assign them to variables prior to using them. To avoid any problems, a ninja should either use function declarations or ensure that all function expressions are defined at the top of the scope, along with any variable declarations.
+
+Callbacks
+
+Remember at the start of this chapter when we said that functions in JavaScript are first-class objects, and this means that they behave in just the same way as every other value? Well, they can also be given as a parameter to another function. A function that is passed as an argument to another is known as a callback.
+
+Here's a basic example of a function called pizza, which accepts an argument for the type of topping that goes on the pizza, as well as a callback function saying what to do with the pizza:
+
+function pizza(topping, callback){
+	console.log("This is a " + topping + " pizza");
+	callback();
+}
+
+Now we can create some utility functions for what we do with pizzas, such as cook them and eat them:
+
+function cook(){
+	console.log("The pizza is cooking");
+}
+
+function eat(){
+	console.log("I've eaten the pizza!");
+}
+
+We're just logging some simples messages to the console in these examples, but these functions could be used to do anything in a practical sense.
+
+Let's have a go at using these utility functions as callbacks in our pizza function:
+
+pizza("Ham & Pineapple", cook);
+"This is a Ham & Pineapple pizza"
+"The pizza is cooking"
+
+pizza("Ham & Pineapple", eat);
+"This is a Ham & Pineapple pizza"
+"I've eaten the pizza!"
+
+Okay, so in these examples, the cook() and eat() functions were quite similar, but they should demonstrate that you could do something very different in the pizza function depending on the callback function that is provided as an argument. This can make your functions much more flexible.
+
+Note that the callbacks cook and eat are passed as arguments without parentheses. This is because the argument is only a reference to the function. The actual callback is invoked in the body of the function, where parentheses are used.
+
+A function can also take an anonymous function as a callback. For example, say we want to deliver a pizza, but we have no deliver function. We can write an anonymous function that does what we want:
+
+pizza("Ham & Pineapple, function()"){
+	console.log("The pizza has been delivered.");
+});
+
+This is only really useful for one-off tasks. It is often a much better idea to keep functions seperate and named so that they can be reused again. It's also a bad idea to use this method for long function definitions as it can be confusing where the callback starts and ends.
+
+Callbacks are used extensively in many JavaScript functions and we'll see much more of them throughout the book.
