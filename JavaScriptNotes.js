@@ -1715,3 +1715,27 @@ function hoist(){
 At the beginning of the function, the variable a has not been declared or assigned a value, so in theory, trying to write console.log(a) should result in an error. Yet the declaration of a is hoisted to the top of the function, so the function knows that a variable called a exists. The value that it is assigned to is not hoisted, however, so until the assignment is made, the value of a is undefined.
 
 Hoisting can cause some confusion, so a ninja should declare, and assign if required, all local variables at the beginning of a function so that hoisting is unnecessary.
+
+Function Hoisting
+
+Functions that are defined inside other functions are also hoisted, but they behave differently depending on how they are defined.
+
+If a function is defined using function declaration, the whole function is hoisted to the top of the function, meaning that it can be invoked before it has been defined.
+
+A function expression (where an anonymous function is assigned to a variable) is hoisted in a similar way to variables. So the declaration will be hoisted, but not the actual function. This means that the function cannot be invoked until after it appears in the code.
+
+This behaviour also applies to the global scope, as can be seen in the following example:
+
+add(2,3) // this will work because the add function is hoisted
+
+function add(x,y){
+	console.log(x + y);
+}
+
+subtract(5,2); // this won't work because the subtract function hasn't been defined yet
+
+subtract = function(x,y){
+	console.log(x - y);
+}
+
+This is the major difference between the two ways of defining function literals and it may influence your decision regarding which one to use. Some people like that using function expressions means you're required to define all functions and assign them to variables prior to using them. To avoid any problems, a ninja should either use function declarations or ensure that all function expressions are defined at the top of the scope, along with any variable declarations.
