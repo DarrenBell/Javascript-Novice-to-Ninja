@@ -1694,3 +1694,24 @@ Here's the console log result:
 "d is not defined"
 
 In this example, d is also only defined inside the function, but by using var it has local scope and is only accessible inside the function. When we try to log the value of d outside the function, it causes an error because d is not defined outside its scope.
+
+Hoisting
+
+Hositing is the process of moving a value to the top of the code block where it is used, regardless of where it is defined.
+
+Variable Hoisting
+
+All variable declarations are automatically moved to the top of a function's scope, as if they were defined at the start of the function. Variable assignment is not hoisted, however. This means that a variable assigned at the end of the function will have a value of undefined until the assignment is made. The following example shows how this works:
+
+function hoist(){
+	console.log(a); // at this point a is undefined
+	//
+	// imagine lots more code here
+	//
+	var a = "Hoist Me!";
+	conole.log(a); // now is a string
+}
+
+At the beginning of the function, the variable a has not been declared or assigned a value, so in theory, trying to write console.log(a) should result in an error. Yet the declaration of a is hoisted to the top of the function, so the function knows that a variable called a exists. The value that it is assigned to is not hoisted, however, so until the assignment is made, the value of a is undefined.
+
+Hoisting can cause some confusion, so a ninja should declare, and assign if required, all local variables at the beginning of a function so that hoisting is unnecessary.
