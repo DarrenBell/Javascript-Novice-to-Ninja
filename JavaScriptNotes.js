@@ -1786,3 +1786,31 @@ pizza("Ham & Pineapple, function()"){
 This is only really useful for one-off tasks. It is often a much better idea to keep functions seperate and named so that they can be reused again. It's also a bad idea to use this method for long function definitions as it can be confusing where the callback starts and ends.
 
 Callbacks are used extensively in many JavaScript functions and we'll see much more of them throughout the book.
+
+Sorting Arrays
+
+In the last chapter we saw that arrays have a sort() method that sorted the items in the array into alphabetical order. This is fine for strings, but it doesn't work so well for numbers:
+
+[1,3,12,5,23,18,7].sort();
+[1,12,18,23,3,5,7]
+
+The reason for this is that the numbers are converted into strings and then placed in aplhabetical order.
+
+So how do you sort an array of numerical values? The answer is to provide a callback function to the sort() method that tells the sort() method how to compare two values, a and b. The callback function should return the following:
+
+a negative value if a comes before b
+0 if a and b are in the same position
+a positive value if a comes after b
+
+Here is an example of a compareNumbers function that can be used as a callback to sort numbers:
+
+function compareNumbers(a,b){
+	return a-b;
+}
+
+This simply subtracts the two numbers that are being compared, giving a result that is either negative (if b is bigger than a), zero (if a and b are the same value), or positive (if a is bigger than b). This means that it can be used as a callback to sort the array of numbers correctly:
+
+[1,3,12,5,23,18,7].sort(compareNumbers);
+[1, 3, 5, 7, 12, 18, 23]
+
+Much better!
