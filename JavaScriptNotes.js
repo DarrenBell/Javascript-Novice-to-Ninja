@@ -1814,3 +1814,49 @@ This simply subtracts the two numbers that are being compared, giving a result t
 [1, 3, 5, 7, 12, 18, 23]
 
 Much better!
+
+Improving the mean() Function
+
+Earlier in the chapter we created a mean() function that would calculate the mean of any number of arguments. We can improve on this, allowing a callback to be added as the last argument that specifies a function to be applied to all the numbers before the mean is calculated. This will allow us to work out things such as the mean of all numbers if they were doubled or squared.
+
+Here is the code for the improved function that accepts a callback:
+
+function mean(values, callback) {
+	var total = 0;
+	for(var i=0, max = values.length; i < max; i++) {
+		if (typeof callback === "function") {
+			total += callback(values[i]);
+		} else {
+			total += values[i];
+		}
+	}
+	return total/max;
+}
+
+The next part of the code is similar to our previous mean() function, except in the following if block where we check to see if the callback argument is a function. If it is, the callback is applied to each value before being added to the total; otherwise, the total is calculated using just the values from the array given as the first argument:
+
+if (typeof callback === "function") {
+      total += callback(values[i]);
+    } else {
+      total += values[i];
+    }
+
+Let's have a go at using it:
+
+mean(2,5,7,11,4); // this should just calculate the mean
+5.8
+
+Now let's use an anonymouse function to double all the numbers before calculating the mean:
+
+mean([2,5,7,11,4],function(x){ return 2*x;});
+
+This is the equivalent of calculating the mean of 2*2, 2*5, 2*7, 2*11 and 2*4.
+
+Last of all, let's use the square function that we wrote earlier in this chapter as a callback to square all the numbers before calculating the mean:
+
+mean([2,5,7,11,4],square);
+43
+
+This is the equivalent of calculating the mean of 2^2, 5^2, 7^2, 11^2, and 4^2.
+
+I trust these examples show how using callbacks can make functions much more powerful and flexible.
