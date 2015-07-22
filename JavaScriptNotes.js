@@ -1860,3 +1860,77 @@ mean([2,5,7,11,4],square);
 This is the equivalent of calculating the mean of 2^2, 5^2, 7^2, 11^2, and 4^2.
 
 I trust these examples show how using callbacks can make functions much more powerful and flexible.
+
+Array Iterators
+
+ECMAScript 5 introduced a number of methods for arrays that utilize callbacks to make them much more flexiable.
+
+forEach()
+
+In the last chapter, we saw that a for loop could be used to loop through each value in an array like so:
+
+var colors = ["Red", "Green", "Blue"]
+
+for( var i = 0, max = colors.length ; i < max ; i++ ) {
+	console.log("Color at position " + i + " is " + colors[i]);
+}
+"Color at position 0 is Red"
+"Color at position 1 is Green"
+"Color at position 2 is Blue"
+
+map()
+
+The map() method is very similar to the forEach() method. It also iterates over an array and takes a callback function as a parameter that is invoked on each item in the array. This is often used to process data returned from databases in array form, such as adding HTML tags to plain text. The difference is that it returns a new array that replaces each value with the return value of the callback function. For example, we can square every number in an array using the square function we wrote previously as a callback to the map() method:
+
+[1,2,3].map( square )
+[1, 4, 9]
+
+An anonymous function can also be used as a callback. This example will write all items in the array in uppercase and place them inside paragraph tags:
+
+["red", "green", "blue"].map( function(color) {
+	return "<p>" + color.toUppercase() + "</p>"; } );
+["<p>RED</p>", "<p>GREEN</p>", "<p>BLUE</p>"]
+
+Notice in this example the anonymous function takes a parameter, color, which refers to the item in the array. This callback can also take two more parameters - the second parameter refers to the index number in the array and the third refers to the array itself. All three parameters can be seen in the next example:
+
+["red", "green", "blue"].map( function(color, index, array) {
+	return index + ": " + color + " (length " + array.length + ")"; } );
+
+["0: red (length 3)", "1: green (length 3), "2: blue(length 3)"]
+
+reduce()
+
+The reduce() method is another method that iterates over each value in the array, but this time it cumulatively combines each result to return just a single value. The callback function is used to describe how to combine each value of the array with the running total. This is often used to calculate statistics such as averages based on data returned from a database in array form. It usually takes two parameters: The first parameter represents the previous value and the second parameter represents the current item in the array. The following example shows how to sum an array of numbers:
+
+[1,2,3,4,5].reduce( function(prev,current) {
+	return prev + current;
+});
+15
+
+The value of prev starts as the first item in the array. The value of prev then becomes the result of this operation. Then the next item in the array is added to this running total, and so on, until every item in the array has been added.
+
+The reduce method also takes a second parameter after the callback, which is the initial value of prev. For example, we could total the numbers in an array, but start at 10, instead of zero:
+
+[1,2,3,4,5].reduce( function(prev,current){
+	return prev + current;
+},10); // second parameter of 10 here
+25
+
+Another example could be to calculate the average word length in a sentence:
+
+sentence = "The quick brown fox jumped over the lazy dog"
+"The quick brown fox jumped over the lazy dog"
+
+The sentence can be converted into an array using the split() method:
+
+words = sentence.split(" ");
+["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"]
+
+Now we can use the reduce() function to calculate the total number of letters in the sentence:
+
+total = words.reduce( function(prev,word){
+	return prev + word.length;
+},0);
+
+average = total/words.length;
+4
