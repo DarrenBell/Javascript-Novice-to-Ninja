@@ -1934,3 +1934,34 @@ total = words.reduce( function(prev,word){
 
 average = total/words.length;
 4
+
+Using map() and reduce() Together
+
+The map() and reduce() methods are often used in combination to create some powerful transformations of data stored in arrays. Because the map() function returns the transformed array, the reduce() can be chained on the end. For example, we can calculate the sim of square numbers using the map() method to square each number in the array and then use the reduce() method to add the results together:
+
+[1,2,3].map(square).reduce(function (total,x) {
+	return x + total;});
+14
+
+Another more complex example could be used to take an array of orders, apply a sales tax to them using map() and then use reduce() to find the total:
+
+var sales = [100, 230, 55];
+totalAfterTaxSales = sales.map( function(amount) {
+	return amount * 1.15; // add 15% sales tax
+}).reduce( function(prev, current) {
+	return prev + current;
+});
+442.75
+
+filter()
+
+The filter() method returns a new array that only contains items from the original array that pass return true when passed to the callback. For example, we can filter an array of numbers to just the even numbers using the following code:
+
+var numbers = [2, 7, 6, 5, 11, 23, 12]
+
+numbers.filter( function(number) {
+	return number%2 === 0; // this returns true if the number is even
+});
+[2, 6, 12]
+
+There are other array methods that use callbacks that are worth investigating such as reduceRight(), every(), and some(). More information about them can be found at the Mozilla Developer Network.
