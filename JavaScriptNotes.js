@@ -1965,3 +1965,7 @@ numbers.filter( function(number) {
 [2, 6, 12]
 
 There are other array methods that use callbacks that are worth investigating such as reduceRight(), every(), and some(). More information about them can be found at the Mozilla Developer Network.
+
+Refactoring Code
+
+Now that we have a good understanding of functions, we’re going to have a go at refactoring the code for our Quiz Ninja project so that it uses functions to describe the main parts of the program. Refactoring is the process of improving the code’s structure and maintainability without changing its behavior.
