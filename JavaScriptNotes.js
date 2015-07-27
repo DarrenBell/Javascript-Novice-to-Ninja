@@ -1969,3 +1969,7 @@ There are other array methods that use callbacks that are worth investigating su
 Refactoring Code
 
 Now that we have a good understanding of functions, we’re going to have a go at refactoring the code for our Quiz Ninja project so that it uses functions to describe the main parts of the program. Refactoring is the process of improving the code’s structure and maintainability without changing its behavior.
+
+Objects
+
+Everything in JavaScript is either one of the five primitive values we met in Chapter 2 (strings, numbers, Booleans, undefined, and null) or an object. We've actually met some objects already; arrays in Chapter 3 and functions in Chapter 4 are both objects, although these are built-in objects that are part of the language. In this chapter we're going to look at user-defined objects as well as some other built-in objects.  
