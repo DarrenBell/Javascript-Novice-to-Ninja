@@ -1972,4 +1972,25 @@ Now that we have a good understanding of functions, we’re going to have a go a
 
 Objects
 
-Everything in JavaScript is either one of the five primitive values we met in Chapter 2 (strings, numbers, Booleans, undefined, and null) or an object. We've actually met some objects already; arrays in Chapter 3 and functions in Chapter 4 are both objects, although these are built-in objects that are part of the language. In this chapter we're going to look at user-defined objects as well as some other built-in objects.  
+Everything in JavaScript is either one of the five primitive values we met in Chapter 2 (strings, numbers, Booleans, undefined, and null) or an object. We've actually met some objects already; arrays in Chapter 3 and functions in Chapter 4 are both objects, although these are built-in objects that are part of the language. In this chapter we're going to look at user-defined objects as well as some other built-in objects.
+
+We will cover:
+
+Object literals
+Adding properties to objects
+object methods
+JSON
+the Math object
+the Date object
+the RegExp object
+our project
+
+Object Literals
+
+An object in JavaScript is a self-contained set of related values and functions. They act as a collection of named properties that map to any JavaScript value such as strings, numbers, Booleans, arrays and even functions. If a property's value is a function, it is known as a method.
+
+One way to think about an object is that it is like a dictionary where you look up a property name and see a value. Another way of thinking is that it is like a database of values; some databases actually use JavaScript objects to store information. This is similar to a hash or associative array in other programming languages; however, JavaScript objects are much more flexible as they can be employed to encapsulate code that can be reused throughout a program. They can also inherit properties from other objects.
+
+An object literal is an object that is created directly in the language by wrapping all its properties and methods in curly braces {}. Object literals are a distinguishing feature of the JavaScript language, as they allow objects to be created quickly without the need for a class template.
+
+
