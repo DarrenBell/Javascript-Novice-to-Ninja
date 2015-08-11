@@ -2015,3 +2015,15 @@ Each property is a key-value pair, separates by commas. In the example, the firs
 If a property's name doesn't follow the rules for naming variables described in Chapter 2, it needs to be quoted. For example, the property "real name" needs to be quoted because it contains a space.
 
 All objects are mutable at any time when a program is running. This means that its properties and methods can be changed or removed and new properties and methods can be added to the object.
+
+Creating Objects
+
+To create an object literal, simply enter a pair of curly braces. The following example creates an empty object that is assigned to the variable spiderman:
+
+var spiderman = {};
+
+It's also possible to create an object using a constructor function. This example willo create an empty object:
+
+var spiderman = new Object();
+
+This method is not recommended, however, and the object literal notation is the preferred way of creating objects. The obvious reason is because it requires less typing; a constructor takes more steps in the background, which can cause programs to run slower.
