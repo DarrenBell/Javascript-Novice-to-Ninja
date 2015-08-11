@@ -1993,4 +1993,25 @@ One way to think about an object is that it is like a dictionary where you look 
 
 An object literal is an object that is created directly in the language by wrapping all its properties and methods in curly braces {}. Object literals are a distinguishing feature of the JavaScript language, as they allow objects to be created quickly without the need for a class template.
 
+A Super Example
 
+Here is an example of an object literal that describes the Man of Steel:
+
+var superman = {
+	name: "Superman",
+	"real name": "Clark Kent",
+	height: 75,
+	weight: 235,
+	hero: true,
+	villian: false,
+	allies: ["Batman","Supergirl","Superboy"],
+	fly: function(){
+	return "Up, up and away!";
+	}
+}
+
+Each property is a key-value pair, separates by commas. In the example, the first property is called name and its calue is "Superman", while the property fly is a method.
+
+If a property's name doesn't follow the rules for naming variables described in Chapter 2, it needs to be quoted. For example, the property "real name" needs to be quoted because it contains a space.
+
+All objects are mutable at any time when a program is running. This means that its properties and methods can be changed or removed and new properties and methods can be added to the object.
