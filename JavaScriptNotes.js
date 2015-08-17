@@ -2027,3 +2027,25 @@ It's also possible to create an object using a constructor function. This exampl
 var spiderman = new Object();
 
 This method is not recommended, however, and the object literal notation is the preferred way of creating objects. The obvious reason is because it requires less typing; a constructor takes more steps in the background, which can cause programs to run slower.
+
+Accessing Properties
+
+You can access the properties of an object using the dot notation that we've already seen in previous chapters:
+
+superman.name
+"Superman"
+
+You can also access an object's properties using bracket notation - the property is represented by a string inside square brackets, so needs to be placed inside single or double quotation marks:
+
+superman['name']
+"Superman"
+
+Dot notation is much more common, but bracket notation has a few advantages: it is the only was to access nonstandard property and method names that don't follow the variable naming rules. It also lets you evaluate an expression and use it as the object key:
+
+superman["real" + " " "name"] // the property is built using string concatenation
+"Clarke Kent"
+
+If you try to access a property that doesn't exist, undefined will be returned:
+
+superman.city
+undefined
