@@ -2042,10 +2042,20 @@ superman['name']
 
 Dot notation is much more common, but bracket notation has a few advantages: it is the only was to access nonstandard property and method names that don't follow the variable naming rules. It also lets you evaluate an expression and use it as the object key:
 
-superman["real" + " " "name"] // the property is built using string concatenation
+superman["real" + " " + "name"] // the property is built using string concatenation
 "Clarke Kent"
 
 If you try to access a property that doesn't exist, undefined will be returned:
 
 superman.city
 undefined
+
+Calling Methods
+
+To call an object's method we can also use dot or bracket notation. Calling a method is the same as invoking a function, so parentheses need to be placed after the method name:
+
+superman.fly()
+"Up, up and away!"
+
+superman['fly']()
+"Up, up and away!"
