@@ -2059,3 +2059,23 @@ superman.fly()
 
 superman['fly']()
 "Up, up and away!"
+
+Checking if Properties or Methods Exist
+
+The in operator can be used to check whether an object has a particular property. So, for example, we can check if the superman object has a property called city using this code:
+
+"city" in superman
+false
+
+Alternatively, you could also check to see if the property or method doesn’t return undefined:
+
+superman.city !== undefined
+false
+
+As mentioned earlier, objects can inherit properties from other objects, so all objects have a method called hasOwnProperty(). This can be used to check whether an object has a property that is its own, rather than one that has been inherited from another object:
+
+superman.hasOwnProperty('city');
+false
+
+superman.hasOwnProperty('name');
+true
