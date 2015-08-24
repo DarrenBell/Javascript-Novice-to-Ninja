@@ -2079,3 +2079,29 @@ false
 
 superman.hasOwnProperty('name');
 true
+
+Finding all the Properties of an Object
+
+for(var key in superman) {
+  console.log(key + ": " + superman[key]);
+}
+"name: Superman"
+"real name: Clark Kent"
+"height: 75"
+"weight: 235"
+"hero: true"
+"villain: false"
+"allies: Batman,Supergirl,Superboy"
+"fly: function (){
+    console.log(\"Up, up and away!\");
+  }"
+
+In this example, we create a variable called key. This is then used to represent the name of each property or method in the superman object inside the for loop.
+
+To make sure that only an object’s own properties are returned, a quick check can be implemented beforehand:
+
+for(var key in superman) {
+	if(superman.hasOwnProperty(key)){
+		console.log(key + ": " + superman[key]);
+	}
+}
