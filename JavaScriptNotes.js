@@ -2094,7 +2094,7 @@ for(var key in superman) {
 "allies: Batman,Supergirl,Superboy"
 "fly: function (){
     console.log(\"Up, up and away!\");
-  }"
+}"
 
 In this example, we create a variable called key. This is then used to represent the name of each property or method in the superman object inside the for loop.
 
@@ -2105,3 +2105,19 @@ for(var key in superman) {
 		console.log(key + ": " + superman[key]);
 	}
 }
+
+Adding Properties
+
+New properties and methods can be added to objects at any time in a program. This is done by assigning a value to the new property. For example, if we wanted to add a new city property to our superman object, we would do it like so:
+
+superman.city = "Metropolis"
+"Metropolis"
+
+Now if we take a look at the superman object, we can see that it has a city property:
+
+superman
+{"city": "Metropolis", "fly": function (){
+console.log("Up, up and away!");}, "height": 75, "name": "Superman",
+"real name": "Clark Kent", "weight": 235}
+
+Notice that the properties don’t necessarily appear in the order that they were entered. An object is not an ordered list like an array, so you should never rely on the properties being in a certain order.
