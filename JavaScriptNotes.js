@@ -2121,3 +2121,19 @@ console.log("Up, up and away!");}, "height": 75, "name": "Superman",
 "real name": "Clark Kent", "weight": 235}
 
 Notice that the properties don’t necessarily appear in the order that they were entered. An object is not an ordered list like an array, so you should never rely on the properties being in a certain order.
+
+Changing Properties
+
+You can change the value of an object’s properties at any time using assignment. For example, we can change the value of the "real name" property like this:
+
+superman['real name'] = "Kal-El"
+"Kal-El"
+
+We can check the update has taken place by taking a look at the object:
+
+superman
+{"allies": ["Batman", "Supergirl", "Superboy"], "city":
+"Metropolis", "fly": function (){
+    console.log("Up, up and away!");
+  }, "height": 75, "hero": true, "name": "Superman", "real name":
+"Kal-El", "villain": false, "weight": 235}
