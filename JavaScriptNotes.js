@@ -2151,3 +2151,29 @@ superman
 {"allies": ["Batman", "Supergirl", "Superboy"], "city":
 "Metropolis", "height": 75, "hero": true, "name": "Superman", "real name":
 "Kal-El", "villain": false, "weight": 235}
+
+Nested Objects
+
+It’s even possible for an object to contain other objects. These are known as nested objects. Here’s an example of an object that contains a list of other objects. It has been assigned to the variable jla:
+
+jla = {
+  superman: { realName: "Clarke Kent" },
+  batman: { realName: "Bruce Wayne" },
+  wonderWoman: { realName: "Diana Prince" },
+  flash: { realName: "Barry Allen" },
+  greenLantern: { realName: "Hal Jordan" },
+  martianManhunter: { realName: "John Jones" }
+}
+
+The values in nested objects can be accessed by referencing each property name in order using either dot or bracket notation:
+
+jla.wonderWoman.realName
+"Diana Prince"
+
+jla['flash']['realName']
+"Barry Allen"
+
+You can even mix the different notations:
+
+jla.martianManhunter['realName']
+"John Jones"
