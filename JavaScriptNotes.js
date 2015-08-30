@@ -2137,3 +2137,17 @@ superman
     console.log("Up, up and away!");
   }, "height": 75, "hero": true, "name": "Superman", "real name":
 "Kal-El", "villain": false, "weight": 235}
+
+Removing Properties
+
+Any property can be removed from an object using the delete operator. For example, if we wanted to remove the fly method from the superman object, we would enter the following:
+
+delete superman.fly
+true
+
+Now if we take a look at the superman object, we can see that he has lost his ability to fly:
+
+superman
+{"allies": ["Batman", "Supergirl", "Superboy"], "city":
+"Metropolis", "height": 75, "hero": true, "name": "Superman", "real name":
+"Kal-El", "villain": false, "weight": 235}
