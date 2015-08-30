@@ -2177,3 +2177,36 @@ You can even mix the different notations:
 
 jla.martianManhunter['realName']
 "John Jones"
+
+Objects as Parameters to Functions
+
+An object literal can be passed as a parameter to a function. This allows the arguments to be given in any order and for default values to be used.
+
+The following example shows how this can be done:
+
+function greet (options) {
+  options = options || {};
+  greeting = options.greeting || "Hello";
+  name = options.name || "Anon";
+  age = options.age || 18
+  return greeting + "! My name is " + name + " and I am " + age + " years old.";
+}
+
+It takes an object called options as an argument. If no object is provided, we create an empty object instead in this line:
+
+options = options || {};
+This is a common JavaScript pattern used to create default values. It relies on the logical OR statement being lazily evaluated. If options already exists, only the first statement will be evaluated, so options will remain as its current value. If no arguments are supplied to the function, the value of options will be undefined, which is falsy. Then the second operand will be evaluated and options will be assigned to an empty object literal.
+
+The same method is then used to set default values for the greeting, name, and age properties of the options object. At the end of the method, a string is returned that uses the values that were supplied, or the default values.
+
+Here is an example of how the function can be used:
+
+greet({ greeting: "Hi", age: 10, name: "Bart" });
+"Hi! My name is Bart and I am 10 years old."
+
+You can enter the parameters in any order and if you don’t enter one of the values, its default value will be used:
+
+greet({ name: "Lisa", age: 8 });
+"Hello! My name is Lisa and I am 8 years old."
+
+This is a popular pattern used with functions, particularly when there are a lot of options, and it is common to many JavaScript libraries.
