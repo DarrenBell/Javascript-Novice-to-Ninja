@@ -2249,3 +2249,9 @@ JSON.stringify(wonderWoman);
 Note that the quote marks are escaped and any methods an object has (such as the aforementioned lasso method) will simply be ignored by the stringify method.
 
 These methods are useful when passing data to and from a web server using Ajax requests or when using localStorage to store data on a user’s machine. JSON data is easy to exchange between different services as most languages and protocols are able to interpret data as strings of text.
+
+The Math Object
+
+The Math object has several properties that represent mathematical constants and methods. These are used to carry out a number of useful operations.
+
+All the properties and methods of the Math object are immutable and unable to be changed.
