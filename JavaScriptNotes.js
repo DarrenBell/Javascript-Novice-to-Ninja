@@ -2210,3 +2210,42 @@ greet({ name: "Lisa", age: 8 });
 "Hello! My name is Lisa and I am 8 years old."
 
 This is a popular pattern used with functions, particularly when there are a lot of options, and it is common to many JavaScript libraries.
+
+JSON
+
+JavaScript Object Notation, or JSON, was invented by Douglas Crockford in 2001. It is a popular lightweight data-storage format that is used for data serialization and configuration. It is often used to exchange information between web services and is employed by sites such as Twitter, Facebook, and Trello to share information. It manages to hit the sweet spot between being both human and machine-readable.
+
+JSON is a string representation of the object literal notation that we have just seen. There are a few differences, though, such as property names being quoted and not using functions to create methods.
+
+Here is an example of a JSON object representing the Caped Crusader:
+
+var batman = '{"name": "Batman","real name": "Bruce Wayne","height": 74,"weight": 210,"hero": true,"villain": false,"allies": ["Robin","Batgirl","Superman"]}'
+
+JSON is becoming increasingly popular as a data storage format and many programming languages now have libraries dedicated to parsing and generating it. Since ECMAScript 5, there has been a global JSON object that can be used to do the same in JavaScript.
+
+The parse method takes a JSON string and returns a JavaScript object:
+
+JSON.parse(batman);
+{"allies": ["Robin", "Batgirl", "Superman"], "height": 74, "hero": true, "name": "Batman", "real name": "Bruce Wayne", "villain": false, "weight": 210}
+
+The stringify method does the opposite, taking a JavaScript object and returning a string of JSON data, as can be seen in the example:
+
+var wonderWoman = {
+  name: "Wonder Woman",
+  "real name": "Diana Prince",
+  height: 72,
+  weight: 165,
+  hero: true,
+  villain: false,
+  allies: ["Wonder Girl","Donna Troy","Superman"],
+  lasso: function(){
+     console.log("You will tell the truth!");
+  }
+}
+
+JSON.stringify(wonderWoman);
+"{\"name\":\"Wonder Woman\",\"real name\":\"Diana Prince\",\"height\":72,\"weight\":165,\"hero\":true,\"villain\":false,\"allies\":[\"Wonder Girl\",\"Donna Troy\",\"Superman\"]}"
+
+Note that the quote marks are escaped and any methods an object has (such as the aforementioned lasso method) will simply be ignored by the stringify method.
+
+These methods are useful when passing data to and from a web server using Ajax requests or when using localStorage to store data on a user’s machine. JSON data is easy to exchange between different services as most languages and protocols are able to interpret data as strings of text.
