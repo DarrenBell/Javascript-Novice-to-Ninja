@@ -2255,3 +2255,31 @@ The Math Object
 The Math object has several properties that represent mathematical constants and methods. These are used to carry out a number of useful operations.
 
 All the properties and methods of the Math object are immutable and unable to be changed.
+
+Mathematical Constants
+
+The Math object has eight properties that represent a mix of commonly used math constants. Note that they are all named in capital letters, which is a convention for constant values:
+
+Math.PI // The ratio of the cirumference and diameter of a circle
+3.141592653589793
+
+Math.SQRT2 // The square root of 2
+1.4142135623730951
+
+Math.SQRT1_2 // The reciprocal of the square root of 2
+0.7071067811865476
+
+Math.E // Euler's constant
+2.718281828459045
+
+Math.LN2 // The natural logarithm of 2
+0.6931471805599453
+
+Math.LN10 // The natural logarithm of 10
+2.302585092994046
+
+Math.LOG2E // Log base 2 of Euler's constant
+1.4426950408889634
+
+Math.LOG10E // Log base 10 of Euler's constant
+0.4342944819032518
