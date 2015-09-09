@@ -2283,3 +2283,110 @@ Math.LOG2E // Log base 2 of Euler's constant
 
 Math.LOG10E // Log base 10 of Euler's constant
 0.4342944819032518
+
+Mathematical Operations
+
+The Math object also has several methods to carry out a variety of useful mathematical operations.
+
+The Math.abs() method returns the absolute value of a number. So if the number is positive, it will remain the same and if it is negative, it will become positive:
+
+Math.abs(3);
+3
+
+Math.abs(-4.6);
+4.6
+
+The Math.ceil() method will round a number up to the next integer, or remain the same if it is already an integer:
+
+Math.ceil(4.2);
+5
+
+Math.ceil(8);
+8
+
+Math.ceil(-4.2);
+-4
+
+The Math.floor() method will round a number down to the next integer, or remain the same if it is already an integer:
+
+Math.floor(4.2);
+4
+
+Math.floor(8);
+8
+
+Math.floor(-4.2);
+5
+
+The Math.round() method will round a number to the nearest integer:
+
+Math.round(4.5);
+5
+
+Math.round(4.499);
+4
+
+Math.round(-4.2);
+-4
+
+The Math.exp() method will raise a number to the power of Euler’s constant:
+
+Math.exp(1); // This is Euler's constant
+2.718281828459045
+
+Math.exp(0); // Any number to the power of 0 is 1
+1
+
+Math.exp(-3);
+0.04978706836786393
+
+The Math.pow() method will raise any number (the first argument) to the power of another number (the second argument):
+
+Math.pow(3,2); // 3 squared
+9
+
+Math.pow(4.5,0); // Any number to the power of 0 is 1
+1
+
+Math.pow(27,1/3); // A nice way to do cube roots
+
+The Math.sqrt() method returns the positive square root of a number:
+
+Math.sqrt(121);
+11
+
+Math.sqrt(2); // same as Math.SQRT2
+1.4142135623730951
+
+Math.sqrt(-1); // No built in imaginary numbers!
+NaN
+
+The Math.log() method returns the natural logarithm of a number:
+
+Math.log(Math.E); // Natural logs have a base of Euler's constant
+1
+
+Math.log(1); // log of 1 is zero
+0
+
+Math.log(0); // You can't take the log of zero
+-Infinity
+
+Math.log(-2); // You can't take logs of negative numbers
+NaN
+
+The Math.max() method returns the maximum number from its arguments:
+
+Math.max(1,2,3);
+3
+
+Math.max(Math.PI,Math.SQRT2, Math.E);
+3.141592653589793
+
+And the Math.min() method unsurprisingly returns the minimum number from the given arguments:
+
+Math.min(1,2,3);
+1
+
+Math.min(Math.PI,Math.SQRT2, Math.E);
+1.4142135623730951
