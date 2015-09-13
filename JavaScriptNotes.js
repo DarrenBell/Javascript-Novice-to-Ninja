@@ -2390,3 +2390,44 @@ Math.min(1,2,3);
 
 Math.min(Math.PI,Math.SQRT2, Math.E);
 1.4142135623730951
+
+Trigonometric Functions
+
+The Math object also has the standard trigonometric functions, which are very useful when working with geometrical objects. All angles are measured in radians for these functions.
+
+Remind Me About Radians
+
+Radians are a standard unit of angular measurement, equal to the angle of the circle’s center corresponding to the arc that subtends it.
+
+The Math.sin() returns the sine of an angle:
+
+Math.sin(Math.PI/6); // this calculation contains rounding errors, it should be 0.5
+0.49999999999999994
+
+The Math.cos() returns the cosine of an angle:
+
+Math.cos(Math.PI/6);
+0.8660254037844387
+
+The Math.tan() returns the tangent of an angle:
+
+Math.tan(Math.PI/4); // another rounding error, this should be 1
+0.9999999999999999
+
+Math.tan(Math.PI/2); // this should be NaN or Infinity
+16331778728383844
+
+The Math.asin() returns the arcsine of a number. The result is an angle:
+
+Math.asin(1);
+1.5707963267948966
+
+The Math.acos() returns the arccosine of a number. The result is an angle:
+
+Math.acos(0.5);
+1.0471975511965976
+
+The Math.atan() returns the arctangent of a number. The result is an angle:
+
+Math.atan(Math.sqrt(3)); // Same as Math.PI/3
+1.0471975511965976
