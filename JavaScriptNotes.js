@@ -2431,3 +2431,26 @@ The Math.atan() returns the arctangent of a number. The result is an angle:
 
 Math.atan(Math.sqrt(3)); // Same as Math.PI/3
 1.0471975511965976
+
+Random Numbers
+
+The Math.random() method is used to create random numbers, which can be very useful when writing programs. Calling the method will generate a number between 0 and 1, like so:
+
+Math.random();
+0.7881970851344265
+
+To generate a random number between 0 and another number, we can multiply the value by that number. The following code generates a random number between 0 and 6:
+
+6 * Math.random();
+4.580981240354013
+
+If we want to generate a random integer, we can use the Math.floor() method that we saw earlier to remove the decimal part of the return value. The following code generates a random integer between 0 and 5 (it will never be 6, because it always rounds down):
+
+Math.floor(6 * Math.random());
+4
+
+It’s a useful exercise to try and write a function that will generate a random number between two values.
+
+Experimental Methods
+
+There are some experimental functions being considered for inclusion in the next version of the ECMAScript specification and are already implemented in some browsers. You can find a full list at the Mozilla Developer Reference.
