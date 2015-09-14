@@ -2454,3 +2454,72 @@ It’s a useful exercise to try and write a function that will generate a random
 Experimental Methods
 
 There are some experimental functions being considered for inclusion in the next version of the ECMAScript specification and are already implemented in some browsers. You can find a full list at the Mozilla Developer Reference.
+
+The Date Object
+
+Date objects hold information about dates and times. Each object represents a single moment in time.
+
+Constructor Function
+
+A constructor function is used to create a new date object using the new operator:
+
+today = new Date();
+[object Date]{
+}
+
+This confirms that the variable today points to a Date object. To see what the date is, we use the toString() method that all objects have:
+
+today.toString();
+"Sun Jun 08 2014 15:43:03 GMT+0100 (BST)"
+
+If an argument is not supplied, the date will default to the current date and time. It’s possible to create Date objects for any date by supplying it as an argument to the constructor function. This can be written as a string in a variety of forms:
+
+christmas = new Date('2014 12 25');
+[object Date]{
+
+  }
+
+christmas.toString();
+"Thu Dec 25 2014 00:00:00 GMT+0000 (GMT)"
+
+chanukah = new Date('16 December 2014');
+[object Date]{
+
+  }
+
+chanukah.toString();
+"Tue Dec 16 2014 00:00:00 GMT+0000 (GMT)"
+
+eid = new Date('Saturday, July 18, 2015');
+[object Date]{
+
+  }
+
+eid.toString();
+"Sat Jul 18 2015 00:00:00 GMT+0100 (BST)"
+
+JavaScript is very flexible in the date format, which can be used in the string that is provided as an argument; however, in order to be more consistent, it is better to provide each bit of information about the date as a separate argument. The parameters that can be provided are as follows:
+
+new Date(year,month,day,hour,minutes,seconds,millisecons)
+
+Here is an example:
+
+easter = new Date(2015, 3, 05);
+[object Date]{
+
+  }
+
+easter.toString();
+"Sun Apr 05 2015 00:00:00 GMT+0100 (BST)"
+
+Notice that the months start counting at zero, so January is 0, February is 1, and so on up to December, which is 11.
+
+An alternative is to use a timestamp, which is a single integer argument that represents the number of milliseconds since the Epoch (1st January 1970):
+
+diwali = new Date(1414018800000);
+[object Date]{
+
+  }
+
+diwali.toString();
+"Thu Oct 23 2014 00:00:00 GMT+0100 (BST)"
