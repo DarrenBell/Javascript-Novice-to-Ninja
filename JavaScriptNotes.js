@@ -2523,3 +2523,56 @@ diwali = new Date(1414018800000);
 
 diwali.toString();
 "Thu Oct 23 2014 00:00:00 GMT+0100 (BST)"
+
+Getter Methods
+
+The properties of date objects are unable to be viewed or changed directly. Instead, they have a number of methods known as getter methods that return information about the date object, such as the month and year.
+
+Once you have created a date object it will have access to all the getter methods. There are two versions of each method, one that returns the information in local time and the other that uses Coordinated Universal Time (UTC).
+
+The getDay() and getUTCDay() methods are used to find the day of the week that the date object falls on. It returns a number, starting at 0 for Sunday, up to 6 for Saturday:
+
+diwali.getDay(); // it's on a Thursday
+4
+
+The getDate() and getUTCDate()methods return the day of the month for the date object:
+
+diwali.getDate(); // it's on the 23rd
+23
+
+The getMonth() and getUTCMonth() methods can be used to find the month of the date object. It returns an integer, but remember that JavaScript starts counting at 0, so January is 0, February is 1, and so on up to December being 11:
+
+diwali.getMonth(); // it's in October
+9
+
+The getFullYear() and getUTCFullYear() methods return the year of the date object. There is also a getYear() method, but it isn’t Y2K compliant, so shouldn’t be used:
+
+diwali.getYear(); // broken for years after 2000
+114
+
+diwali.getFullYear(); // use this instead
+2014
+
+There are also getHours(), getUTCHours(), getMinutes(), getUTCMinutes(), getSeconds(), getUTCSeconds, getMilliseconds(), and getUTCMilliseconds() methods that will return the hours, minutes, seconds and milliseconds since midnight.
+
+The getTime() method returns a timestamp representing the number of milliseconds since the Epoch:
+
+diwali.getTime();
+1414018800000
+
+This can be useful for incrementing dates by a set amount of time; for example, a day can be represented by 1000 * 60 * 60 * 24 milliseconds:
+
+christmasEve = new Date(christmas.getTime() - 1000 * 60 * 60 * 24)
+[object Date]{
+
+  }
+
+christmasEve.toString();
+Fri Dec 26 2014 00:00:00 GMT+0000 (GMT)
+
+The getTimezoneOffset() method returns the difference, in minutes, between local time and UTC. For example, my timezone is currently British Summer Time:
+
+new Date().getTimezoneOffset()
+-60
+
+This shows that British Summer Time is one hour ahead of UTC.
