@@ -2576,3 +2576,30 @@ new Date().getTimezoneOffset()
 -60
 
 This shows that British Summer Time is one hour ahead of UTC.
+
+Setter Methods
+
+Most of the getter methods covered in the previous section have equivalent setter methods. These are methods that can be used to change the value of the date held in a Date object. Each of the methods takes an argument representing the value to which you update the date. The methods return the timestamp of the updated date object.
+
+As an example, we can change the value of the date stored in the diwali variable so that it contains the date of Diwali in 2015, which is on Wednesday, November 11, 2015:
+
+diwali.setDate(11);
+1412982000000
+
+diwali.setMonth(10); // November is month 10
+1415664000000
+
+diwali.setFullYear(2015);
+1447200000000
+
+Note that the values returned by these functions is the timestamp representing the number of milliseconds since the Epoch. To see the actual date, we need to use the toString() mehtod:
+
+diwali.toString();
+"Wed Nov 11 2015 00:00:00 GMT+0000 (GMT)"
+
+There are also setHours(), setUTCHours(), setMinutes(), setUTCMinutes(), setSeconds(), setUTCSeconds, setMilliseconds() and setUTCMilliseconds() methods that can be used to edit the time portion of a Date object.
+
+Alternatively, if you know the date as a timestamp, you can use the setTime() method:
+
+diwali.setTime(1447200000000);
+1447200000000
