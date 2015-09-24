@@ -2603,3 +2603,9 @@ Alternatively, if you know the date as a timestamp, you can use the setTime() me
 
 diwali.setTime(1447200000000);
 1447200000000
+
+The RegExp Object
+
+A regular expression (or RegExp, for short) is a pattern that can be used to search or modify strings. A common use case is "find and replace" type operations. For example, say you were looking for any word ending in "ing," you could use the regular expression /\w+ing/.
+
+If that example looks a bit confusing, don’t worry, it will become clear as we move through this section. Regular expressions can look a little strange; in fact, they're something of a dark art that could easily fill a whole book! They are certainly useful when manipulating text strings, though, so we'll introduce some of the basics here and recommend that you carry out further reading once you've finished this book.
