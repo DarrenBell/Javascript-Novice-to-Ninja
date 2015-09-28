@@ -2621,3 +2621,24 @@ Alternatively, you can create a new instance of the RegExp object using the new 
 var pattern = new RegExp('\w+ing');
 
 This permits you to create regular expressions using strings.
+
+RegExp Methods
+
+Once you have created a regular expression object, you can use the test() to see if a string (passed to the method as a parameter) matches the regular expression pattern. It returns true if the pattern is in the string, and false if it isn’t:
+
+var pattern = /.*ing/;
+undefined
+
+pattern.test("joke"); //testing if the string ends in 'ing'
+false
+
+pattern.test("joking");
+true
+
+The exec() method works the same as the test() method, but instead of returning true or false, it returns an array containing the first match found or null if there aren’t any matches:
+
+pattern.exec("joke"); //testing if the string ends in 'ing'
+null
+
+pattern.exec("joking");
+["joking"]
