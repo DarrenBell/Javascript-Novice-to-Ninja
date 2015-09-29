@@ -2642,3 +2642,9 @@ null
 
 pattern.exec("joking");
 ["joking"]
+
+Basic Regular Expressions
+
+At the most basic level, a regular expression will just be a string of characters, so the following will match the string 'java':
+
+/java/
