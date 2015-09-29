@@ -2741,3 +2741,39 @@ In a regular expression, there are a number of characters that have a special me
 \s matches any whitespace character, and is equivalent to [ \t\r\n\f]
 
 \S matches any non-whitespace character, and is equivalent to [^ \t\r\n\f]
+
+Modifiers
+
+Modifiers can be placed after a pattern to match multiple occurrences of that pattern:
+
+? matches zero or one occurrence of the pattern
+
+* matches zero or more occurrences of the pattern
+
++ matches one or more occurrences of the pattern
+
+{n} matches n occurrences of the pattern
+
+{n,} matches at least n occurrences of the pattern
+
+{,m} matches at most m occurrences of the pattern
+
+{n,m} matches at least n and at most m occurrences of the pattern
+
+^ specifies that the pattern must come at the beginning
+
+$ specifies that the pattern must come at the end
+
+Any special characters or modifiers can be escaped using a backslash. So if you wanted to match a question mark, ?, you would need to use the regular expression /\?/.
+
+For example, the following regular expression will match anything that starts with J followed by one or more vowels, then any letters or numbers ending in ing:
+
+var pattern = /J[aeiou]+\w*ing/
+
+As we can see, it matches the words "Joking" and "Jeering":
+
+pattern.test("Joking");
+true
+
+pattern.test("Jeering");
+true
