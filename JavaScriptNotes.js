@@ -2777,3 +2777,17 @@ true
 
 pattern.test("Jeering");
 true
+
+A Practical Example
+
+If we were looking for PDF files and had a list of filenames, this regular expression could be used to find them (assuming they have a .pdf extension, of course):
+
+var pdf = /.*\.pdf$/;
+
+This looks for zero or more occurrences of any character, followed by an escaped period, followed by the letters "pdf" that must come at the end of the string:
+
+pdf.test("chapter1.pdf");
+true
+
+pdf.test("report.doc");
+false
