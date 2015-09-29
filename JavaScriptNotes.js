@@ -2723,3 +2723,21 @@ true
 The only way to change the ignoreCase property to false is to redefine the regular expression:
 
 pattern = /java/
+
+Special Characters
+
+In a regular expression, there are a number of characters that have a special meaning, commonly known as metacharacters:
+
+. matches any character
+
+\w matches any word character, and is equivalent to [A-Za-z0-9_]
+
+\W matches any non-word character, and is equivalent to [^A-Za-z0-9_]
+
+\d matches any digit character, and is equivalent to [0-9]
+
+\D matches any non-digit character, and is equivalent to [^0-9]
+
+\s matches any whitespace character, and is equivalent to [ \t\r\n\f]
+
+\S matches any non-whitespace character, and is equivalent to [^ \t\r\n\f]
