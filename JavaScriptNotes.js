@@ -2791,3 +2791,30 @@ true
 
 pdf.test("report.doc");
 false
+
+String Methods
+
+There are a number of string methods that accept regular expressions as a parameter.
+
+The split() method that we saw in Chapter 2 can also accept a regular expression that’s used to split a string into the separate elements of an array:
+
+"Hello World   from JavaScript!".split(/\s+/) // splits the string on one or more occurrences of a white space character
+["Hello", "World", "from", "JavaScript!"]
+
+The match() method returns an array of all the matches:
+
+"JavaScript".match(/[aeiou]/); // return the first vowel
+["a"]
+
+"JavaScript".match(/[aeiou]/g); // return an array of all the vowels - note the 'g' flag
+["a", "a", "i"]
+
+The search() method returns the position of the first match:
+
+"I'm learning JavaScript".search(/java/i);
+13
+
+The replace() method replaces any matches with another string:
+
+"JavaScript".replace(/[aeiou]/ig,"*"); // replace all vowels with *
+"J*v*Scr*pt"
