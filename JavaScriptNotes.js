@@ -2818,3 +2818,26 @@ The replace() method replaces any matches with another string:
 
 "JavaScript".replace(/[aeiou]/ig,"*"); // replace all vowels with *
 "J*v*Scr*pt"
+
+Roll the Dice!
+
+We’ll finish off by using what we have learned in the chapter to create a dice object.
+
+The object will have a roll() method that returns a number between 1 and 6. Here’s the code to create the dice object:
+
+dice = {
+	sides: 6;
+	roll.function(){
+	return Math.floor(6 * Math.random()) + 1;
+	}
+}
+
+Let's take it for a spin:
+
+dice.roll();
+5
+
+dice.roll();
+3
+
+This is an example of using JavaScript objects to model a real-world object. We’ll develop this concept further in Chapter 13.
