@@ -2648,3 +2648,34 @@ Basic Regular Expressions
 At the most basic level, a regular expression will just be a string of characters, so the following will match the string 'java':
 
 /java/
+
+Character Groups
+
+Groups of characters can be placed together inside square brackets. This character group represents any one of the characters inside the brackets. For example, the following regular expression matches any vowel:
+
+/[aeiou]/
+
+A sequence of characters can also be represented by placing a dash [-] between the first and last characters; for example, all the uppercase letters can be represented as:
+
+/[A-Z]/
+
+The digits 0-9 can be represented as:
+
+/[0-9]/
+If a ^ character is placed at the start of the sequence of characters with the brackets, it negates the sequence, so the following regular expression represents any character that is not a capital letter:
+
+/[^A-Z]/
+
+These groups can be combined with letters to make a more complex pattern. For example, the following regular expression represents the letter J (lower case or capital) followed by a vowel, followed by a lowercase v, followed by a vowel:
+
+var pattern = /[Jj][aeiou]v[aeiou]/;
+undefined
+
+pattern.test("JavaScript");
+true
+
+pattern.test("jive");
+true
+
+pattern.test("hello");
+false
