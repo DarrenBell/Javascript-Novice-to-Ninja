@@ -2679,3 +2679,47 @@ true
 
 pattern.test("hello");
 false
+
+Regular Expression Properties
+
+Regular expressions are objects and have the following properties:
+
+The global property makes the pattern return all matches. By default, the pattern only looks for the first occurrence of a match.
+
+The ignoreCase property makes the pattern case-insensitive. By default, they are case sensitive.
+
+The multiline property makes the pattern multiline. By default, a pattern will stop at the end of a line.
+
+The following flags can be placed after a regular expression literal to change the default properties:
+
+g sets the global property to true
+
+i sets the ignoreCase property to true
+
+m sets the multiline property to true
+
+For example, the following regular expression will match "JavaScript" or "javascript" because the ignoreCase property is set to true:
+
+var pattern = /java/i
+undefined
+
+pattern.test("JavaScript");
+true
+
+These properties can be checked using the dot notation, but cannot be updated once the regular expression has been created, as can be seen in the following example:
+
+var pattern = /java/i
+undefined
+
+pattern.ignoreCase // checking it is true
+true
+
+pattern.ignoreCase = false // this won't work
+false
+
+pattern.ignoreCase // has it changed?
+true
+
+The only way to change the ignoreCase property to false is to redefine the regular expression:
+
+pattern = /java/
