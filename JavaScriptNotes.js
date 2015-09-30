@@ -2841,3 +2841,21 @@ dice.roll();
 3
 
 This is an example of using JavaScript objects to model a real-world object. We’ll develop this concept further in Chapter 13.
+
+The Document Object Model (DOM) allows you to access elements of a web page and enable interaction with the page by adding and removing elements, changing the order of elements, changing the content of elements, changing element attributes, and even altering how elements are styled.
+
+In this chapter, we’ll be cover these topics:
+
+    introduction to the DOM
+
+    getting elements―getElementById, getElementsByClassName, getElementsByTagName, querySelector, and querySelectorAll
+
+    navigating the DOM tree
+
+    getting and setting an element’s attributes
+
+    updating the DOM by creating dynamic markup
+
+    changing the CSS of an element
+
+    our project―insert questions dynamically into the DOM to create a list of quiz questions
