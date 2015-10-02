@@ -2859,3 +2859,13 @@ In this chapter, we’ll be cover these topics:
     changing the CSS of an element
 
     our project―insert questions dynamically into the DOM to create a list of quiz questions
+
+The Document Object Model
+
+What is the Document Object Model?
+
+The Document Object Model, or DOM for short, represents an HTML document as a network of connected nodes that form a tree-like structure.
+
+Everything on a web page is represented by a node―HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML tag is the root node and every other part of the document is a child node of this.
+
+The DOM is not actually part of JavaScript because it is language agnostic. This means that it can be used in any programming language, not just JavaScript. It is an Application Programming Interface (API) that lets us access and modify different parts of a web page using the built-in document object.
