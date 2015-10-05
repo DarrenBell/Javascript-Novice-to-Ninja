@@ -2869,3 +2869,15 @@ The Document Object Model, or DOM for short, represents an HTML document as a ne
 Everything on a web page is represented by a node―HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML tag is the root node and every other part of the document is a child node of this.
 
 The DOM is not actually part of JavaScript because it is language agnostic. This means that it can be used in any programming language, not just JavaScript. It is an Application Programming Interface (API) that lets us access and modify different parts of a web page using the built-in document object.
+
+History of the DOM
+
+In the early days of the Web, browser vendors such as Netscape and Microsoft developed their own distinct ways of accessing parts of a web page. In the beginning, they tended to focus on common page elements such as images, links, and forms. These methods became known as DOM level 0, or legacy DOM. Some of the more common methods can still be used in the current DOM API.
+
+The World Wide Web Consortium (W3C) started to standardize the process and created the DOM API level 1 in 1998. This introduced a complete model for web pages that allowed every part of them to be navigated.
+
+The DOM level 2 was published in 2000 and introduced the popular getElementById() method, which made it much easier to access specific elements on a web page.
+
+The current standard is DOM level 3, although level 4 is in the process of being developed as a living standard, which means that it is being implemented in browsers before it is formalized and published.
+
+Despite the standardization process, browsers have not always implemented the DOM consistently so it has been difficult to program for in the past. Fortunately, since Internet Explorer 8, DOM support has been much more consistent and most modern browsers implement the current DOM level 3 API reasonably well. They are also implementing more of the new DOM level 4 features with every update.
