@@ -2916,3 +2916,29 @@ body.nodeName;
 "BODY"
 
 Note that the element name is returned in upper-case letters.
+
+Legacy DOM Shortcut Methods
+
+There are some methods from DOM Level 0 that can still be employed to access commonly used elements:
+
+document.body returns the body element of a web page, as we saw in the previous example.
+
+document.images returns a node list of all the images contained in the document.
+
+document.links returns a node list of all the <a> elements and <area> elements that have an href attribute.
+
+document.anchors returns a node list of all the <a> elements that have a name attribute.
+
+document.forms returns a node list of all the forms in the document.
+
+Array-like, but not an Array
+Node lists are array-like objects, but they are not arrays. You can access each item using index notation. For example, document.images[0] will return the first image in the node list of all the images in the document.
+
+They also have a length property, which can be used to iterate through every element using a for loop, like so:
+
+for (var i=0 ; i < document.images.length ; i++) {
+
+  // do something with each image using document.images[i]
+
+}
+Node lists don’t have any other array methods such as slice, splice, and join.
