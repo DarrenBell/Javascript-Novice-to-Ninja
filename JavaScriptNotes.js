@@ -2881,3 +2881,38 @@ The DOM level 2 was published in 2000 and introduced the popular getElementById(
 The current standard is DOM level 3, although level 4 is in the process of being developed as a living standard, which means that it is being implemented in browsers before it is formalized and published.
 
 Despite the standardization process, browsers have not always implemented the DOM consistently so it has been difficult to program for in the past. Fortunately, since Internet Explorer 8, DOM support has been much more consistent and most modern browsers implement the current DOM level 3 API reasonably well. They are also implementing more of the new DOM level 4 features with every update.
+
+Getting Elements
+
+The DOM API provides several methods that allow us to access any element on a page. These methods will return a node object or a node list, which is an array-like object. These objects can then be assigned to a variable and be inspected or modified.
+
+For example, we can access the body element of a web page and assign it to the variable body using the following code:
+
+body = document.body;
+<body>
+Now that we have a reference to the body element, we can check its type:
+
+typeof body;
+"object";
+This is a special Node object with a number of properties and methods that we can use to find information about, or modify, the body element.
+
+For example, we can use the nodeType property to find out what type of node it is:
+
+body.nodeType;
+1
+All nodes have a numerical code to signify what type they are. 
+
+1 = element
+2 = attribute
+3 = text
+4 = comment
+5 = document
+
+There are other types not covered in the table, but these aren’t used in HTML documents. As we can see from the table, a code of 1 confirms that body is an element node.
+
+We can also use the nodeName property to find the name of the element:
+
+body.nodeName;
+"BODY"
+
+Note that the element name is returned in upper-case letters.
