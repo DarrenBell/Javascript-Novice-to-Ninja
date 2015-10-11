@@ -2942,3 +2942,14 @@ for (var i=0 ; i < document.images.length ; i++) {
 
 }
 Node lists don’t have any other array methods such as slice, splice, and join.
+
+Getting an Element by Its ID
+
+The getElementById() method does exactly what it says on the tin. It returns a reference to the element with a unique id attribute that is given as an argument. For example, we can get a reference to the h1 element with the id of 'title' in the dom.htm page by writing this in the console:
+
+title = document.getElementById('title');
+<h1 id="title">
+
+Every id attribute should be unique to just one element, so this method will return a reference to that element. For this reason, it’s a very quick way of finding elements in a document. It is also supported in all the major browsers.
+
+If no element exists with the given ID, null is returned.
