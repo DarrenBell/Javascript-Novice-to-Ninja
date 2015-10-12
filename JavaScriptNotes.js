@@ -2953,3 +2953,25 @@ title = document.getElementById('title');
 Every id attribute should be unique to just one element, so this method will return a reference to that element. For this reason, it’s a very quick way of finding elements in a document. It is also supported in all the major browsers.
 
 If no element exists with the given ID, null is returned.
+
+Get Elements by Their Tag Name
+
+getElementsByTagName() will return a live node list of all the elements with the tag name that is provided as an argument. For example, we can get all the paragraphs in the document using this code:
+
+paragraphs = document.getElementsByTagName('p');
+HTMLCollection [ <p.swim>, <p#bike>, <p> ]
+
+As this is a node list, we can use the the index notation to find each individual paragraph in the list:
+
+swim = paragraphs[0];
+<p class="swim">
+
+bike = paragraphs[1];
+<p id="bike">
+
+run = paragraphs[2];
+<p>
+
+If there are no elements in the document with the given tag name, an empty node list is returned.
+
+document.getElementsByTagName() is supported by all major browsers and in Internet Explorer from version 6 onwards.
