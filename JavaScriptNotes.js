@@ -2975,3 +2975,29 @@ run = paragraphs[2];
 If there are no elements in the document with the given tag name, an empty node list is returned.
 
 document.getElementsByTagName() is supported by all major browsers and in Internet Explorer from version 6 onwards.
+
+Get Elements by Their Class Name
+
+getElementsByClassName() will return a live node list of all elements that have the class name that is supplied as an argument. For example, we can return a collection of all elements with the class of 'swim' using the following:
+
+document.getElementsByClassName('swim');
+HTMLCollection [  ]
+
+There is only one element on the page that has the class name of swim, but a node list (with a length of 1) will still be returned:
+
+document.getElementsByClassName('swim').length;
+1
+
+Note that if there are no elements with the given class, an HTML collection is still returned, but it will have a length of 0:
+
+document.getElementsByClassName('walk').length;
+0
+
+To access the paragraph element node, we use the index notation to refer to the first element in the collection:
+
+swim = document.getElementsByClassName('swim')[0];
+<p class="swim">
+
+This now refers to the actual paragraph element with a class of swim.
+
+document.getElementsByClassName is supported in all the major modern browsers, but was only supported in Internet Explorer 9 and later.
