@@ -3001,3 +3001,29 @@ swim = document.getElementsByClassName('swim')[0];
 This now refers to the actual paragraph element with a class of swim.
 
 document.getElementsByClassName is supported in all the major modern browsers, but was only supported in Internet Explorer 9 and later.
+
+Query Selectors
+
+The document.querySelector() method allows you to use CSS notation to find the first element in the document that matches a CSS query selector criteria provided as an argument. If no elements match, it will return null.
+
+The document.querySelectorAll() method also uses CSS notation but returns a node list of all the elements in the document that match the CSS query selector. If no elements match, it will return an empty node list.
+
+These are both very powerful methods that can emulate all the methods discussed, as well as allowing more fine-grained control over which element nodes are returned.
+
+For example, the following could be used instead of document.getElementById():
+
+bike = document.querySelector('#bike');
+<p id="bike">
+
+And this could be used instead of document.getElementsByClassName:
+
+swim = document.querySelectorAll('.swim');
+NodeList [ <p.swim> ]
+
+Note that this is not a live node list. See the section later in this chapter for more details about live node lists.
+
+CSS query selectors are a powerful way of specifying very precise items on a page. For example, CSS pseudo-selectors can also be used to pinpoint a particular element. The following code, for example, will return only the last paragraph in the document:
+
+run = document.querySelector('p:last-child');
+
+All modern browsers support these methods and Internet Explorer supported it from version 8 onwards. Version 8 of Internet Explorer only understands CSS2.1 selectors (what it supports), so complex CSS3 notations such as x ~ y:empty will fail to work.
