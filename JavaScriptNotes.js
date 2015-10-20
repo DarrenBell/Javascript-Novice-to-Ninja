@@ -3086,3 +3086,26 @@ bike.previousSibling
 Once again, these methods find the next and previous node, not element, so they will often return a blank text node as in the examples above.
 
 Using these properties allows you to navigate around the whole of the document tree.
+
+Finding the Value of a Node
+
+Finding the text contained within an element is actually trickier than it sounds. For example, the variable swim has a DOM node that contains the following HTML:
+
+<p class="swim">Swim</p>
+
+It clearly contains the text "swim", but this is held in a text node, which is the first child of the swim node:
+
+swimTextNode = swim.firstChild;
+#text "Swim"
+
+Now that we have a reference to the text node, we can find the text contained inside it using the nodeValue method:
+
+swimTextNode.nodeValue;
+"Swim"
+
+A quicker way of doing this is to use the textContent property. This will return the text content of an element as a string:
+
+swim.textContent
+"Swim"
+
+Note that Internet Explorer version 8 does not support the textContent property, but has the innerText property, which works in a similar way.
