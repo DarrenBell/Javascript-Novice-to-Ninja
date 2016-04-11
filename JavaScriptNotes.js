@@ -2900,7 +2900,7 @@ For example, we can use the nodeType property to find out what type of node it i
 
 body.nodeType;
 1
-All nodes have a numerical code to signify what type they are. 
+All nodes have a numerical code to signify what type they are.
 
 1 = element
 2 = attribute
@@ -3109,3 +3109,7 @@ swim.textContent
 "Swim"
 
 Note that Internet Explorer version 8 does not support the textContent property, but has the innerText property, which works in a similar way.
+
+Getting and Setting Attributes
+
+All HTML elements have a large number of possible attributes (class, id, src, href etc).  The DOM API contains getter and setter methods that can be used to view, add, remove or modify the value of any of these attributes.
