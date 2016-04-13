@@ -3113,3 +3113,21 @@ Note that Internet Explorer version 8 does not support the textContent property,
 Getting and Setting Attributes
 
 All HTML elements have a large number of possible attributes (class, id, src, href etc).  The DOM API contains getter and setter methods that can be used to view, add, remove or modify the value of any of these attributes.
+
+Getting an Element's Attributes
+
+The getAttribute() method returns the value or the attribute provided as an argument:
+
+swim.getAttribute("class");
+"swim"
+
+var meta = document.getElementsByTagName("meta")[0];
+undefined
+
+meta.getAttribute("charset");
+"utf-8"
+
+If an element does not have the given attribute, it returns null:
+
+swim.getAttribute("stroke");
+null
